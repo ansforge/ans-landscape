@@ -126,10 +126,25 @@ landscape2 validate guide --guide-file guide.yml
 ## Déploiement (GitHub Pages)
 
 Le workflow `.github/workflows/deploy-landscape.yml` valide, construit et
-déploie automatiquement le contenu de `landscape/` sur GitHub Pages à chaque
-push sur `main` qui touche ce dossier (ou manuellement via
-"Run workflow" dans l'onglet Actions). Il utilise l'image officielle
-`ghcr.io/cncf/landscape2` — aucune installation locale n'est nécessaire côté CI.
+déploie automatiquement le contenu de `landscape/` sur GitHub Pages (ou
+manuellement via "Run workflow" dans l'onglet Actions).
+
+Il utilise l'image **`ghcr.io/ansforge/ans-landscape`** — construite par ce
+dépôt lui-même (`.github/workflows/build-images.yml`, à partir de
+`crates/cli/Dockerfile`) — et non plus l'image officielle CNCF
+`ghcr.io/cncf/landscape2`, car ce dépôt contient désormais des
+personnalisations de l'interface web de landscape2 (`ui/webapp/`, ex. le nom
+de l'outil et la couleur de statut affichés sur chaque tuile en vue grille).
+Le déploiement se déclenche automatiquement une fois que "Build images" a
+terminé avec succès (déclencheur `workflow_run`, pas un `push` direct), pour
+ne jamais utiliser une image obsolète pendant que celle-ci se reconstruit
+(plusieurs minutes, build Rust + wasm-pack + yarn complet). Toute
+modification poussée sur `main` — que ce soit dans `landscape/` ou dans
+`ui/webapp/` — déclenche donc `build-images.yml` puis, à sa suite, ce
+déploiement.
+
+Aucune installation locale n'est nécessaire côté CI (l'image contient déjà
+le binaire `landscape2`).
 
 Le site est publié comme "project site" à
 <https://ansforge.github.io/ans-landscape>, d'où le `base_path: /ans-landscape`

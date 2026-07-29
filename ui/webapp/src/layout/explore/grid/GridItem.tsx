@@ -50,6 +50,22 @@ const GridItem = (props: Props) => {
   // Get featured data considering group exclusions
   const effectiveFeatured = createMemo(() => getEffectiveFeatured(props.item));
 
+  // Color of the status ribbon shown under the item name (ANS statuses:
+  // recommande | alternative | deprecie), independent of CNCF's own
+  // maturity levels used elsewhere for the "archived" dimming effect.
+  const statusColor = () => {
+    switch (props.item.maturity) {
+      case 'recommande':
+        return '#2e7d32';
+      case 'alternative':
+        return '#f9a825';
+      case 'deprecie':
+        return '#c62828';
+      default:
+        return 'transparent';
+    }
+  };
+
   createEffect(
     on(fullDataReady, () => {
       if (fullDataReady()) {
@@ -146,14 +162,12 @@ const GridItem = (props: Props) => {
             >
               <Image name={props.item.name} class={`m-auto ${styles.logo}`} logo={props.item.logo} />
 
-              <Show when={effectiveFeatured() && effectiveFeatured()!.label}>
-                <div
-                  class={`text-center text-uppercase text-dark position-absolute start-0 end-0 bottom-0 text-truncate px-1 ${styles.legend}`}
-                  style={effectiveFeatured() ? { 'border-top': `2px solid ${props.borderColor}` } : {}}
-                >
-                  {effectiveFeatured()!.label}
-                </div>
-              </Show>
+              <div
+                class={`text-center text-dark position-absolute start-0 end-0 bottom-0 text-truncate px-1 ${styles.legend}`}
+                style={{ 'border-top': `2px solid ${statusColor()}` }}
+              >
+                {props.item.name}
+              </div>
             </div>
           </div>
         </div>
@@ -227,15 +241,13 @@ const GridItem = (props: Props) => {
               enableLazyLoad={!isUndefined(props.enableLazyLoad) ? props.enableLazyLoad : true}
             />
 
-            <Show when={effectiveFeatured() && effectiveFeatured()!.label}>
-              <div
-                class={`text-center text-uppercase text-dark position-absolute start-0 end-0 bottom-0 text-truncate px-1 ${styles.legend}`}
-                style={effectiveFeatured() ? { 'border-top': `2px solid ${props.borderColor}` } : {}}
-                aria-label={effectiveFeatured()!.label}
-              >
-                {effectiveFeatured()!.label}
-              </div>
-            </Show>
+            <div
+              class={`text-center text-dark position-absolute start-0 end-0 bottom-0 text-truncate px-1 ${styles.legend}`}
+              style={{ 'border-top': `2px solid ${statusColor()}` }}
+              aria-hidden="true"
+            >
+              {props.item.name}
+            </div>
           </button>
         </div>
       </div>

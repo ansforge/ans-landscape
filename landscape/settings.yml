@@ -80,7 +80,7 @@ groups:
     categories:
       - Intelligence Artificielle
 
-  - name: Collaboration & Gestion de projet
+  - name: Conception & Gestion de projet
     categories:
       - Gestion de projet & Collaboration
 
@@ -89,7 +89,7 @@ groups:
       - Sécurité & Identité
       - Données & Analytique
 
-  - name: Fonctions support (RH, Finance, Formation)
+  - name: Fonctions support
     categories:
       - Ressources Humaines
       - Finance & Comptabilité
@@ -101,11 +101,7 @@ groups:
       - Relation client & CRM
       - Gestion documentaire & Signature électronique
 
-  - name: Santé numérique
-    categories:
-      - Santé numérique — Applications internes ANS
-
-  - name: Exploitation & Support utilisateur
+  - name: Support utilisateur
     categories:
       - Support & Exploitation (ITSM)
       - Poste de travail & Bureautique

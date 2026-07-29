@@ -39,6 +39,12 @@ categories:
       Point de départ pour tout projet nécessitant de stocker, transformer
       ou restituer des données.
 
+  - category: "APIs & Interopérabilité"
+    content: |
+      Outils de conception, documentation, test et gestion du cycle de vie
+      des API. À consulter dès qu'un projet expose ou consomme des API,
+      en interne comme avec des partenaires externes.
+
   - category: "Sécurité & Identité"
     content: |
       Gestion des identités et des accès (IAM), des secrets et des

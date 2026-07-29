@@ -15,19 +15,41 @@ sous-catégorie**, pour aider à choisir le bon outil plutôt qu'à explorer un
 
 ## Contenu actuel : des exemples, pas les choix officiels de l'ANS
 
-`data.yml` contient actuellement 54 outils réels et connus du marché
-(Jira, GitLab, Kubernetes, Grafana, Keycloak, Mistral AI, etc.), répartis
-dans les 25 sous-catégories, pour montrer à quoi ressemble un landscape
-rempli et comment fonctionnent les statuts. **Ces choix sont illustratifs**
-(populaires/représentatifs du marché) — ils ne reflètent pas une décision
+`data.yml` contient actuellement 66 outils réels et connus du marché,
+répartis dans 8 catégories (dont "APIs & Interopérabilité"), pour montrer à
+quoi ressemble un landscape rempli et comment fonctionnent les statuts.
+**Ces choix sont illustratifs** — ils ne reflètent pas une décision
 officielle de l'ANS. Il faut les revoir et les ajuster (statuts, outils
 présents/absents) selon la politique réelle de l'agence avant mise en
 production.
 
-La plupart des logos proviennent du projet
-[simple-icons](https://simpleicons.org) (licence CC0, réutilisation libre) ;
-deux outils (GLPI, ServiceNow) n'y ont pas de logo disponible et utilisent
-`logos/placeholder.svg` en attendant un logo officiel.
+Les logos proviennent du projet [simple-icons](https://simpleicons.org)
+(licence CC0, réutilisation libre), recolorés avec la couleur de marque
+officielle de chaque éditeur (voir section suivante). 7 outils n'ont pas de
+logo disponible dans simple-icons et utilisent `logos/placeholder.svg` en
+attendant un logo officiel : Microsoft Planner, Squash TM, Loki, Microsoft
+365 Copilot, Gravitee, ReadyAPI, Microsoft Entra ID, ainsi que GLPI.
+
+## Logos en couleur
+
+Les fichiers SVG de simple-icons sont livrés en une seule couleur, sans
+attribut `fill` (ils apparaissent noirs par défaut). Pour obtenir des logos
+en couleur, un attribut `fill="#RRGGBB"` a été ajouté sur la balise `<svg>`
+racine de chaque fichier, avec la couleur de marque officielle (hex).
+Pour un nouvel outil trouvé sur simple-icons :
+
+1. Télécharger le SVG monochrome :
+   `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<slug>.svg`
+2. Trouver sa couleur officielle (hex) dans
+   `https://cdn.jsdelivr.net/npm/simple-icons@latest/data/simple-icons.json`
+   (chercher par `slug`, champ `hex`).
+3. Ajouter `fill="#<hex>"` juste après `<svg` dans le fichier.
+
+Quelques marques (ex. la suite Microsoft 365, AWS, OpenAI, Power BI) ont un
+fichier d'icône dans simple-icons mais n'apparaissent plus dans son
+catalogue de couleurs officielles (retraits pour raisons de marque) — dans
+ce cas une couleur de marque publique et largement documentée a été utilisée
+manuellement.
 
 ## Ajouter ou modifier un outil
 
@@ -99,8 +121,8 @@ Build and deployment → Source**, sélectionner **GitHub Actions**.
 
 ## À faire avant mise en production
 
-- [ ] Revoir les 54 outils d'exemple (présence, statut recommande/alternative/deprecie) et les remplacer par les choix réels/officiels de l'ANS
-- [ ] Fournir un logo pour GLPI et ServiceNow (actuellement `placeholder.svg`)
+- [ ] Revoir les 66 outils d'exemple (présence, statut recommande/alternative/deprecie) et les remplacer par les choix réels/officiels de l'ANS
+- [ ] Fournir un logo pour les 7 outils en `placeholder.svg` (Microsoft Planner, Squash TM, Loki, Microsoft 365 Copilot, Gravitee, ReadyAPI, Microsoft Entra ID) et pour GLPI
 - [ ] Remplacer les couleurs de `settings.yml` par la charte graphique ANS
 - [ ] Ajouter le logo ANS dans `settings.yml` (`header.logo` / `footer.logo`)
 - [ ] Mettre à jour `url` dans `settings.yml` avec l'URL définitive d'hébergement

@@ -53,6 +53,7 @@ groups:
       - DevOps & Infrastructure
       - Intelligence Artificielle
       - Données & Analytique
+      - APIs & Interopérabilité
       - Sécurité & Identité
       - Support & Exploitation (ITSM)
 
@@ -60,6 +61,7 @@ groups:
     categories:
       - Développement logiciel
       - DevOps & Infrastructure
+      - APIs & Interopérabilité
 
   - name: Intelligence Artificielle
     categories:

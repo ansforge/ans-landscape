@@ -6,201 +6,369 @@
 # référence exhaustive du format.
 #
 # Chaque sous-catégorie ne doit pas dépasser 5 outils (1 à 5 choix max).
-# Chaque outil placé ici est un EXEMPLE À REMPLACER par un outil réel.
+#
+# Les outils listés ci-dessous sont des exemples de valeurs à titre
+# d'illustration (principaux outils du marché, choisis pour montrer le
+# fonctionnement des statuts recommande/alternative/deprecie) — ils ne
+# reflètent pas nécessairement les choix réels/officiels de l'ANS. À ajuster
+# selon les décisions effectives de l'agence.
 
 categories:
   - name: Gestion de projet & Collaboration
     subcategories:
       - name: Gestion de projet & tâches
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Jira
+            homepage_url: https://www.atlassian.com/software/jira
+            logo: jira.svg
+            description: "Suivi de tâches et de projets agiles (Atlassian)."
             project: recommande
+          - name: Trello
+            homepage_url: https://trello.com
+            logo: trello.svg
+            description: "Tableaux Kanban simples pour le suivi de tâches."
+            project: alternative
+          - name: Asana
+            homepage_url: https://asana.com
+            logo: asana.svg
+            description: "Gestion de projets et de flux de travail d'équipe."
+            project: alternative
+
       - name: Documentation & base de connaissances
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Confluence
+            homepage_url: https://www.atlassian.com/software/confluence
+            logo: confluence.svg
+            description: "Base de connaissances et documentation collaborative (Atlassian)."
             project: recommande
+          - name: Notion
+            homepage_url: https://www.notion.so
+            logo: notion.svg
+            description: "Documentation, notes et wiki tout-en-un."
+            project: alternative
+
       - name: Communication & messagerie
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Slack
+            homepage_url: https://slack.com
+            logo: slack.svg
+            description: "Messagerie instantanée et canaux d'équipe."
             project: recommande
+          - name: Microsoft Teams
+            homepage_url: https://www.microsoft.com/microsoft-teams
+            logo: microsoftteams.svg
+            description: "Messagerie, visioconférence et collaboration Microsoft 365."
+            project: alternative
+
       - name: Diagrammes & conception
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Miro
+            homepage_url: https://miro.com
+            logo: miro.svg
+            description: "Tableau blanc collaboratif pour ateliers et schémas."
             project: recommande
+          - name: Figma
+            homepage_url: https://www.figma.com
+            logo: figma.svg
+            description: "Conception d'interfaces et prototypage collaboratif."
+            project: alternative
 
   - name: Développement logiciel
     subcategories:
       - name: Gestion de code source & revue de code
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: GitLab
+            homepage_url: https://about.gitlab.com
+            logo: gitlab.svg
+            description: "Hébergement de code source et revue de code, auto-hébergeable."
             project: recommande
+          - name: GitHub
+            homepage_url: https://github.com
+            logo: github.svg
+            description: "Hébergement de code source et revue de code (SaaS)."
+            project: alternative
+
       - name: Environnements de développement (IDE)
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Visual Studio Code
+            homepage_url: https://code.visualstudio.com
+            logo: visualstudiocode.svg
+            description: "Éditeur de code léger et extensible (Microsoft)."
             project: recommande
+          - name: IntelliJ IDEA
+            homepage_url: https://www.jetbrains.com/idea/
+            logo: intellijidea.svg
+            description: "IDE complet pour le développement Java/JVM (JetBrains)."
+            project: alternative
+
       - name: Intégration & déploiement continu (CI/CD)
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: GitLab CI/CD
+            homepage_url: https://docs.gitlab.com/ee/ci/
+            logo: gitlab.svg
+            description: "Pipelines CI/CD intégrés à GitLab."
             project: recommande
+          - name: Jenkins
+            homepage_url: https://www.jenkins.io
+            logo: jenkins.svg
+            description: "Serveur d'automatisation CI/CD open source, très extensible."
+            project: alternative
+
       - name: Gestion des paquets & artefacts
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Sonatype Nexus Repository
+            homepage_url: https://www.sonatype.com/products/sonatype-nexus-repository
+            logo: sonatype.svg
+            description: "Registre d'artefacts et de paquets multi-formats."
             project: recommande
+          - name: JFrog Artifactory
+            homepage_url: https://jfrog.com/artifactory/
+            logo: jfrog.svg
+            description: "Registre universel d'artefacts et de paquets."
+            project: alternative
+
       - name: Qualité & analyse de sécurité du code
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: SonarQube
+            homepage_url: https://www.sonarsource.com/products/sonarqube/
+            logo: sonarqube.svg
+            description: "Analyse statique de qualité et de sécurité du code."
             project: recommande
+          - name: Snyk
+            homepage_url: https://snyk.io
+            logo: snyk.svg
+            description: "Détection de vulnérabilités dans le code et les dépendances."
+            project: alternative
 
   - name: DevOps & Infrastructure
     subcategories:
       - name: Hébergement & cloud
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: OVHcloud
+            homepage_url: https://www.ovhcloud.com
+            logo: ovh.svg
+            description: "Fournisseur cloud européen, hébergement souverain."
             project: recommande
+          - name: Amazon Web Services
+            homepage_url: https://aws.amazon.com
+            logo: amazonwebservices.svg
+            description: "Plateforme cloud publique généraliste."
+            project: alternative
+          - name: Microsoft Azure
+            homepage_url: https://azure.microsoft.com
+            logo: microsoftazure.svg
+            description: "Plateforme cloud publique généraliste (Microsoft)."
+            project: alternative
+
       - name: Conteneurs & orchestration
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Kubernetes
+            homepage_url: https://kubernetes.io
+            logo: kubernetes.svg
+            description: "Orchestration de conteneurs à grande échelle."
             project: recommande
+          - name: Docker
+            homepage_url: https://www.docker.com
+            logo: docker.svg
+            description: "Conteneurisation d'applications."
+            project: alternative
+
       - name: Infrastructure as Code
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Terraform
+            homepage_url: https://www.terraform.io
+            logo: terraform.svg
+            description: "Provisionnement d'infrastructure déclaratif multi-cloud."
             project: recommande
+          - name: Ansible
+            homepage_url: https://www.ansible.com
+            logo: ansible.svg
+            description: "Automatisation de la configuration et du déploiement."
+            project: alternative
+
       - name: Supervision & observabilité
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Grafana
+            homepage_url: https://grafana.com
+            logo: grafana.svg
+            description: "Visualisation de métriques et tableaux de bord."
             project: recommande
+          - name: Prometheus
+            homepage_url: https://prometheus.io
+            logo: prometheus.svg
+            description: "Collecte de métriques et alerting, standard cloud-native."
+            project: recommande
+          - name: Datadog
+            homepage_url: https://www.datadoghq.com
+            logo: datadog.svg
+            description: "Supervision et observabilité en mode SaaS."
+            project: alternative
+
       - name: Gestion des logs
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Elasticsearch (ELK Stack)
+            homepage_url: https://www.elastic.co
+            logo: elasticsearch.svg
+            description: "Centralisation, recherche et analyse de logs."
             project: recommande
+          - name: Splunk
+            homepage_url: https://www.splunk.com
+            logo: splunk.svg
+            description: "Plateforme d'analyse de logs et de données machine."
+            project: alternative
 
   - name: Intelligence Artificielle
     subcategories:
       - name: Assistants IA & copilotes
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: GitHub Copilot
+            homepage_url: https://github.com/features/copilot
+            logo: githubcopilot.svg
+            description: "Assistant de complétion et génération de code dans l'IDE."
             project: recommande
+          - name: ChatGPT
+            homepage_url: https://openai.com/chatgpt
+            logo: openai.svg
+            description: "Assistant conversationnel généraliste (OpenAI)."
+            project: alternative
+
       - name: Modèles de langage (LLM)
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Claude (Anthropic)
+            homepage_url: https://www.anthropic.com
+            logo: anthropic.svg
+            description: "Famille de modèles de langage d'Anthropic."
             project: recommande
+          - name: Mistral AI
+            homepage_url: https://mistral.ai
+            logo: mistralai.svg
+            description: "Modèles de langage développés en France/UE."
+            project: recommande
+          - name: GPT (OpenAI)
+            homepage_url: https://openai.com
+            logo: openai.svg
+            description: "Famille de modèles de langage d'OpenAI."
+            project: alternative
+
       - name: Plateformes MLOps & data science
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: MLflow
+            homepage_url: https://mlflow.org
+            logo: mlflow.svg
+            description: "Suivi d'expériences et cycle de vie des modèles ML, open source."
             project: recommande
+          - name: Databricks
+            homepage_url: https://www.databricks.com
+            logo: databricks.svg
+            description: "Plateforme data et IA basée sur Apache Spark."
+            project: alternative
 
   - name: Données & Analytique
     subcategories:
       - name: Bases de données
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: PostgreSQL
+            homepage_url: https://www.postgresql.org
+            logo: postgresql.svg
+            description: "Base de données relationnelle open source de référence."
             project: recommande
+          - name: MySQL
+            homepage_url: https://www.mysql.com
+            logo: mysql.svg
+            description: "Base de données relationnelle open source largement répandue."
+            project: alternative
+
       - name: Intégration de données / ETL
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Talend
+            homepage_url: https://www.talend.com
+            logo: talend.svg
+            description: "Intégration et transformation de données (éditeur français)."
             project: recommande
+          - name: Airbyte
+            homepage_url: https://airbyte.com
+            logo: airbyte.svg
+            description: "Intégration de données open source, nombreux connecteurs."
+            project: alternative
+
       - name: Reporting & Business Intelligence
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Power BI
+            homepage_url: https://powerbi.microsoft.com
+            logo: powerbi.svg
+            description: "Reporting et tableaux de bord décisionnels (Microsoft)."
             project: recommande
+          - name: Tableau
+            homepage_url: https://www.tableau.com
+            logo: tableau.svg
+            description: "Visualisation de données et business intelligence."
+            project: alternative
 
   - name: Sécurité & Identité
     subcategories:
       - name: Gestion des identités & accès (IAM)
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Keycloak
+            homepage_url: https://www.keycloak.org
+            logo: keycloak.svg
+            description: "Gestion des identités et accès open source (SSO, OIDC/SAML)."
             project: recommande
+          - name: Okta
+            homepage_url: https://www.okta.com
+            logo: okta.svg
+            description: "Gestion des identités et accès en mode SaaS."
+            project: alternative
+
       - name: Gestion des secrets
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: HashiCorp Vault
+            homepage_url: https://www.vaultproject.io
+            logo: vault.svg
+            description: "Stockage et gestion centralisée des secrets."
             project: recommande
+          - name: 1Password
+            homepage_url: https://1password.com
+            logo: 1password.svg
+            description: "Gestionnaire de mots de passe et secrets d'équipe."
+            project: alternative
+
       - name: Gestion des vulnérabilités
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Qualys
+            homepage_url: https://www.qualys.com
+            logo: qualys.svg
+            description: "Détection de vulnérabilités et gestion de la surface d'exposition."
             project: recommande
+          - name: Trivy
+            homepage_url: https://trivy.dev
+            logo: trivy.svg
+            description: "Scanner de vulnérabilités open source (conteneurs, IaC, dépendances)."
+            project: alternative
 
   - name: Support & Exploitation (ITSM)
     subcategories:
       - name: Ticketing / helpdesk
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
-            logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+          - name: Zendesk
+            homepage_url: https://www.zendesk.com
+            logo: zendesk.svg
+            description: "Gestion des tickets et support utilisateurs en mode SaaS."
             project: recommande
+          - name: GLPI
+            homepage_url: https://glpi-project.org
+            logo: placeholder.svg
+            description: "Helpdesk et gestion de parc informatique, open source."
+            project: alternative
+
       - name: Gestion des configurations (CMDB)
         items:
-          - name: "Exemple à remplacer"
-            homepage_url: https://exemple.fr
+          - name: ServiceNow
+            homepage_url: https://www.servicenow.com
             logo: placeholder.svg
-            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            description: "Plateforme ITSM et CMDB d'entreprise."
             project: recommande
+          - name: GLPI
+            homepage_url: https://glpi-project.org
+            logo: placeholder.svg
+            description: "CMDB et gestion de parc informatique, open source."
+            project: alternative

@@ -13,10 +13,23 @@ sous-catégorie**, pour aider à choisir le bon outil plutôt qu'à explorer un
 - `guide.yml` — texte explicatif par catégorie (page `/guide`)
 - `logos/` — un fichier SVG par outil, référencé par son nom de fichier dans `data.yml`
 
-## Ajouter un outil réel
+## Contenu actuel : des exemples, pas les choix officiels de l'ANS
 
-Chaque sous-catégorie de `data.yml` contient actuellement un item
-`"Exemple à remplacer"` — à remplacer ou dupliquer (max 5 par sous-catégorie) :
+`data.yml` contient actuellement 54 outils réels et connus du marché
+(Jira, GitLab, Kubernetes, Grafana, Keycloak, Mistral AI, etc.), répartis
+dans les 25 sous-catégories, pour montrer à quoi ressemble un landscape
+rempli et comment fonctionnent les statuts. **Ces choix sont illustratifs**
+(populaires/représentatifs du marché) — ils ne reflètent pas une décision
+officielle de l'ANS. Il faut les revoir et les ajuster (statuts, outils
+présents/absents) selon la politique réelle de l'agence avant mise en
+production.
+
+La plupart des logos proviennent du projet
+[simple-icons](https://simpleicons.org) (licence CC0, réutilisation libre) ;
+deux outils (GLPI, ServiceNow) n'y ont pas de logo disponible et utilisent
+`logos/placeholder.svg` en attendant un logo officiel.
+
+## Ajouter ou modifier un outil
 
 ```yaml
 - name: Nom de l'outil
@@ -31,7 +44,8 @@ Chaque sous-catégorie de `data.yml` contient actuellement un item
    - `alternative` — accepté, utilisable dans des contextes spécifiques
    - `deprecie` — à éviter pour de nouveaux usages / en cours de sortie
 2. Déposez un logo au format **SVG uniquement** dans `logos/`, nommé comme
-   la valeur du champ `logo`.
+   la valeur du champ `logo` (essayer `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<slug>.svg`
+   avant de fabriquer un logo, beaucoup d'éditeurs y sont déjà référencés).
 3. Gardez la description à une seule phrase.
 4. Ne dépassez pas 5 outils par sous-catégorie — c'est ce qui garde le
    landscape lisible et utile pour trancher rapidement.
@@ -85,8 +99,8 @@ Build and deployment → Source**, sélectionner **GitHub Actions**.
 
 ## À faire avant mise en production
 
-- [ ] Remplacer les 20 items `"Exemple à remplacer"` par les outils réels de l'ANS
-- [ ] Ajouter les logos SVG correspondants dans `logos/`
+- [ ] Revoir les 54 outils d'exemple (présence, statut recommande/alternative/deprecie) et les remplacer par les choix réels/officiels de l'ANS
+- [ ] Fournir un logo pour GLPI et ServiceNow (actuellement `placeholder.svg`)
 - [ ] Remplacer les couleurs de `settings.yml` par la charte graphique ANS
 - [ ] Ajouter le logo ANS dans `settings.yml` (`header.logo` / `footer.logo`)
 - [ ] Mettre à jour `url` dans `settings.yml` avec l'URL définitive d'hébergement

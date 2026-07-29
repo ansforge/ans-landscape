@@ -7,11 +7,11 @@
 #
 # Chaque sous-catégorie ne doit pas dépasser 5 outils (1 à 5 choix max).
 #
-# Les outils listés ci-dessous sont des exemples de valeurs à titre
-# d'illustration (principaux outils du marché, choisis pour montrer le
-# fonctionnement des statuts recommande/alternative/deprecie) — ils ne
-# reflètent pas nécessairement les choix réels/officiels de l'ANS. À ajuster
-# selon les décisions effectives de l'agence.
+# La majorité des outils ci-dessous proviennent de l'inventaire applicatif
+# réel de l'ANS (MApplication-20260729.xlsx). Quelques outils "de marché"
+# ajoutés lors d'une itération précédente (avant l'import de l'inventaire
+# réel) restent présents à titre d'alternatives illustratives — à confirmer
+# ou retirer selon la politique effective de l'agence.
 
 categories:
   - name: Gestion de projet & Collaboration
@@ -21,35 +21,63 @@ categories:
           - name: Jira
             homepage_url: https://www.atlassian.com/software/jira
             logo: jira.svg
-            description: "Gestion de projets, tickets et workflows."
+            description: "Gestion de projets, tickets et workflows (instances ANS et Ségur)."
             project: recommande
           - name: Redmine
             homepage_url: https://www.redmine.org
             logo: redmine.svg
-            description: "Gestion de projets et suivi d'activités."
+            description: "Gestion de projets et de tickets, utilisée pour le CERT Santé."
             project: alternative
-          - name: Microsoft Planner
-            homepage_url: https://www.microsoft.com/microsoft-365/planner
+          - name: Canopée
+            homepage_url: https://esante.gouv.fr
             logo: placeholder.svg
-            description: "Gestion légère des tâches Microsoft 365."
+            description: "Gestion de projets et portefeuilles."
+            project: alternative
+          - name: Clickup
+            homepage_url: https://clickup.com
+            logo: clickup.svg
+            description: "Plateforme de gestion de tâches et de projets."
+            project: alternative
+          - name: Trello
+            homepage_url: https://trello.com
+            logo: trello.svg
+            description: "Gestion de projet Kanban (tableaux, listes, cartes)."
             project: alternative
 
       - name: Documentation & base de connaissances
         items:
-          - name: SharePoint
-            homepage_url: https://www.microsoft.com/microsoft-365/sharepoint/collaboration
-            logo: microsoftsharepoint.svg
-            description: "Gestion documentaire et collaboration Microsoft 365."
-            project: recommande
           - name: Confluence
             homepage_url: https://www.atlassian.com/software/confluence
             logo: confluence.svg
-            description: "Documentation collaborative et wiki projet."
+            description: "Documentation collaborative et wiki projet (instances ANS et Ségur)."
             project: alternative
           - name: OneNote
             homepage_url: https://www.microsoft.com/microsoft-365/onenote/digital-note-taking-app
             logo: microsoftonenote.svg
             description: "Prise de notes et partage de connaissances."
+            project: alternative
+          - name: Bookstack
+            homepage_url: https://www.bookstackapp.com
+            logo: bookstack.svg
+            description: "Wiki open source pour gérer et organiser de la documentation."
+            project: alternative
+
+      - name: Espaces collaboratifs & Intranet
+        items:
+          - name: SharePoint
+            homepage_url: https://www.microsoft.com/microsoft-365/sharepoint/collaboration
+            logo: microsoftsharepoint.svg
+            description: "Gestion documentaire et espaces collaboratifs Microsoft 365 (Région, Ségur Numérique)."
+            project: recommande
+          - name: Intranet ANS
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Plateforme interne de l'agence (actualités, offres de service, pages thématiques), bâtie sur SharePoint via Powell Software."
+            project: recommande
+          - name: Google Workspace (Docs/Drive)
+            homepage_url: https://workspace.google.com
+            logo: googledrive.svg
+            description: "Référentiels collaboratifs utilisés pour le référencement Ségur (documents, guides, listes officielles)."
             project: alternative
 
       - name: Communication & messagerie
@@ -64,6 +92,11 @@ categories:
             logo: microsoftoutlook.svg
             description: "Messagerie et calendrier Microsoft 365."
             project: recommande
+          - name: Zoom
+            homepage_url: https://zoom.us
+            logo: zoom.svg
+            description: "Visioconférence, webinaires et partage d'écran."
+            project: alternative
 
       - name: Diagrammes & conception
         items:
@@ -75,12 +108,22 @@ categories:
           - name: Miro
             homepage_url: https://miro.com
             logo: miro.svg
-            description: "Ateliers collaboratifs et tableaux blancs."
+            description: "Tableau blanc collaboratif en ligne pour le brainstorming et la planification."
             project: alternative
           - name: Draw.io
             homepage_url: https://www.drawio.com
             logo: diagramsdotnet.svg
             description: "Diagrammes d'architecture et schémas techniques."
+            project: alternative
+          - name: MindManager
+            homepage_url: https://www.mindmanager.com
+            logo: placeholder.svg
+            description: "Cartographie mentale et visualisation d'informations sous forme de cartes heuristiques."
+            project: alternative
+          - name: Klaxoon
+            homepage_url: https://klaxoon.com
+            logo: placeholder.svg
+            description: "Suite collaborative interactive (tableaux blancs, sondages, réunions)."
             project: alternative
 
   - name: Développement logiciel
@@ -139,7 +182,7 @@ categories:
           - name: JFrog Artifactory
             homepage_url: https://jfrog.com/artifactory/
             logo: jfrog.svg
-            description: "Ancienne solution en cours de retrait."
+            description: "Solution DevOps d'hébergement et de distribution d'artefacts binaires."
             project: deprecie
 
       - name: Qualité & sécurité du code
@@ -147,13 +190,18 @@ categories:
           - name: SonarCloud
             homepage_url: https://www.sonarsource.com/products/sonarcloud/
             logo: sonarqubecloud.svg
-            description: "Analyse qualité et sécurité du code."
+            description: "Analyse qualité et sécurité du code, en mode SaaS."
             project: recommande
           - name: Trivy
             homepage_url: https://trivy.dev
             logo: trivy.svg
             description: "Analyse des vulnérabilités."
             project: recommande
+          - name: Sonarqube
+            homepage_url: https://www.sonarsource.com/products/sonarqube/
+            logo: sonarqubeserver.svg
+            description: "Analyse qualité et sécurité du code, auto-hébergée."
+            project: alternative
           - name: OWASP Dependency Check
             homepage_url: https://owasp.org/www-project-dependency-check/
             logo: dependencycheck.svg
@@ -165,8 +213,26 @@ categories:
           - name: Squash TM
             homepage_url: https://www.squashtest.com
             logo: placeholder.svg
-            description: "Gestion du patrimoine de tests."
+            description: "Gestion du patrimoine de tests (instances ANS, Ségur, référencement MES)."
             project: recommande
+
+      - name: Modélisation & architecture d'entreprise
+        items:
+          - name: Sparx Enterprise Architect
+            homepage_url: https://sparxsystems.com/products/ea/
+            logo: placeholder.svg
+            description: "Modélisation et cartographie (UML, BPMN, ArchiMate)."
+            project: recommande
+          - name: Mercator
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Cartographie du système d'information de l'agence."
+            project: recommande
+          - name: Modelio
+            homepage_url: https://www.modelio.org
+            logo: placeholder.svg
+            description: "Modélisation UML, BPMN, SysML et ArchiMate."
+            project: alternative
 
   - name: DevOps & Infrastructure
     subcategories:
@@ -185,7 +251,7 @@ categories:
           - name: Microsoft Azure
             homepage_url: https://azure.microsoft.com
             logo: microsoftazure.svg
-            description: "Cloud public."
+            description: "Cloud public, plateforme applicative (Apps & Services)."
             project: alternative
           - name: Amazon Web Services
             homepage_url: https://aws.amazon.com
@@ -234,6 +300,34 @@ categories:
             description: "Automatisation de configuration."
             project: alternative
 
+      - name: Automatisation & Low-code
+        items:
+          - name: Rudder
+            homepage_url: https://www.rudder.io
+            logo: placeholder.svg
+            description: "Gestion de configuration et de conformité automatisée des systèmes."
+            project: recommande
+          - name: N8N
+            homepage_url: https://n8n.io
+            logo: n8n.svg
+            description: "Automatisation de workflows open source et low-code (instances interne et Ségur)."
+            project: recommande
+          - name: Budibase
+            homepage_url: https://budibase.com
+            logo: budibase.svg
+            description: "Plateforme de développement low-code (instances interne et OVH)."
+            project: alternative
+          - name: Power Automate
+            homepage_url: https://www.microsoft.com/en-us/power-platform/products/power-automate
+            logo: powerautomate.svg
+            description: "Automatisation des flux de travail entre applications Microsoft 365."
+            project: alternative
+          - name: Power Apps
+            homepage_url: https://www.microsoft.com/en-us/power-platform/products/power-apps
+            logo: powerapps.svg
+            description: "Création rapide d'applications métiers low-code."
+            project: alternative
+
       - name: Gestion des secrets
         items:
           - name: HashiCorp Vault
@@ -241,6 +335,11 @@ categories:
             logo: vault.svg
             description: "Gestion centralisée des secrets."
             project: recommande
+          - name: KeepassXC
+            homepage_url: https://keepassxc.org
+            logo: keepassxc.svg
+            description: "Gestionnaire de mots de passe local, open source."
+            project: alternative
 
       - name: Supervision & observabilité
         items:
@@ -259,11 +358,114 @@ categories:
             logo: placeholder.svg
             description: "Centralisation des logs."
             project: recommande
+          - name: Zabbix
+            homepage_url: https://www.zabbix.com
+            logo: placeholder.svg
+            description: "Supervision centralisée en temps réel (serveurs, réseaux, bases de données)."
+            project: alternative
           - name: Elasticsearch
             homepage_url: https://www.elastic.co
             logo: elasticsearch.svg
-            description: "Recherche et analyse de logs."
+            description: "Recherche et analyse de logs (utilisé notamment pour ProSantéConnect)."
             project: alternative
+
+      - name: Réseau & sécurité périmétrique
+        items:
+          - name: Fortinet Manager
+            homepage_url: https://www.fortinet.com
+            logo: fortinet.svg
+            description: "Gestion centralisée des équipements Fortinet (pare-feu, SD-WAN)."
+            project: recommande
+          - name: FortiClient VPN
+            homepage_url: https://www.fortinet.com
+            logo: fortinet.svg
+            description: "Client VPN sécurisé pour l'accès distant chiffré aux réseaux de l'ANS."
+            project: recommande
+          - name: Fortinet FortiAnalyzer
+            homepage_url: https://www.fortinet.com
+            logo: fortinet.svg
+            description: "Journalisation, analyse et reporting centralisés des équipements Fortinet."
+            project: recommande
+          - name: PulseSecure
+            homepage_url: https://www.ivanti.com/products/connect-secure-vpn
+            logo: placeholder.svg
+            description: "VPN sécurisé pour l'accès distant aux ressources internes."
+            project: alternative
+          - name: mRemoteNG
+            homepage_url: https://mremoteng.org
+            logo: placeholder.svg
+            description: "Gestionnaire de connexions à distance multi-protocoles (RDP, VNC, SSH)."
+            project: alternative
+
+      - name: Annuaire & DNS
+        items:
+          - name: DNS AD
+            homepage_url: https://learn.microsoft.com/en-us/windows-server/networking/dns/dns-top
+            logo: placeholder.svg
+            description: "Registre de noms Active Directory."
+            project: recommande
+          - name: DNS GANDI
+            homepage_url: https://www.gandi.net
+            logo: gandi.svg
+            description: "Gestion des noms de domaine (DNS) chez l'hébergeur Gandi."
+            project: recommande
+          - name: AD Manager
+            homepage_url: https://www.manageengine.com/products/ad-manager/
+            logo: placeholder.svg
+            description: "Administration et sécurisation des annuaires Active Directory."
+            project: alternative
+
+      - name: Virtualisation & Cloud privé
+        items:
+          - name: VMware vSphere
+            homepage_url: https://www.vmware.com/products/cloud-infrastructure/vsphere
+            logo: vmware.svg
+            description: "Plateforme de virtualisation d'infrastructure."
+            project: recommande
+          - name: VXRail
+            homepage_url: https://www.dell.com/en-us/shop/dell-vxrail
+            logo: placeholder.svg
+            description: "Infrastructure hyperconvergée (Dell EMC/VMware)."
+            project: recommande
+          - name: Proxmox
+            homepage_url: https://www.proxmox.com
+            logo: proxmox.svg
+            description: "Virtualisation de serveurs open source (VM et conteneurs)."
+            project: alternative
+          - name: Citrix
+            homepage_url: https://www.citrix.com
+            logo: citrix.svg
+            description: "Virtualisation, travail à distance et cloud computing."
+            project: alternative
+
+      - name: Sauvegarde & protection des données
+        items:
+          - name: PowerProtect Data Manager
+            homepage_url: https://www.dell.com/en-us/dt/data-protection/powerprotect-data-manager.htm
+            logo: placeholder.svg
+            description: "Sauvegarde, restauration et conformité des données."
+            project: recommande
+
+      - name: Gestion de parc & terminaux
+        items:
+          - name: Intune
+            homepage_url: https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune
+            logo: placeholder.svg
+            description: "Gestion unifiée des terminaux (MDM) Microsoft."
+            project: recommande
+          - name: FollowMe
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Serveur d'impression centralisé."
+            project: alternative
+
+      - name: Affichage dynamique
+        items:
+          - name: Xibo
+            homepage_url: https://xibosignage.com
+            logo: placeholder.svg
+            description: "Système open source d'affichage dynamique (digital signage)."
+            project: recommande
 
   - name: Intelligence Artificielle
     subcategories:
@@ -346,8 +548,13 @@ categories:
           - name: Matomo
             homepage_url: https://matomo.org
             logo: matomo.svg
-            description: "Mesure d'audience web."
+            description: "Analyse web respectueuse de la vie privée, auto-hébergeable (utilisé pour ProSantéConnect)."
             project: recommande
+          - name: Piano Analytics
+            homepage_url: https://www.piano.io/product/analytics/
+            logo: placeholder.svg
+            description: "Mesure d'audience et analytics web."
+            project: alternative
           - name: Mixpanel
             homepage_url: https://mixpanel.com
             logo: mixpanel.svg
@@ -371,12 +578,25 @@ categories:
           - name: Postman
             homepage_url: https://www.postman.com
             logo: postman.svg
-            description: "Tests et développement d'API."
+            description: "Tests et documentation d'API (requêtes HTTP, automatisation de scénarios)."
             project: alternative
           - name: ReadyAPI
             homepage_url: https://smartbear.com/product/ready-api/overview/
             logo: placeholder.svg
-            description: "Tests fonctionnels et API."
+            description: "Tests automatisés pour API REST dans les environnements de validation des services numériques de santé."
+            project: alternative
+
+      - name: Normes & interopérabilité
+        items:
+          - name: Art Decor
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Conception, maintien et publication de spécifications d'interopérabilité en santé numérique."
+            project: recommande
+          - name: Cobaz
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Consultation et gestion des normes industrielles ou métiers."
             project: alternative
 
   - name: Sécurité & Identité
@@ -391,7 +611,7 @@ categories:
           - name: Microsoft Entra ID
             homepage_url: https://www.microsoft.com/security/business/identity-access/microsoft-entra-id
             logo: placeholder.svg
-            description: "Gestion des identités Microsoft."
+            description: "Gestion des identités et des accès basée sur le cloud (anciennement Azure AD)."
             project: alternative
 
       - name: Gestion des vulnérabilités
@@ -406,11 +626,81 @@ categories:
             logo: qualys.svg
             description: "Gestion de la surface d'exposition."
             project: alternative
+          - name: Greenbone
+            homepage_url: https://www.greenbone.net
+            logo: placeholder.svg
+            description: "Gestion des vulnérabilités et scans de sécurité réseau, open source."
+            project: alternative
           - name: OWASP Dependency Check
             homepage_url: https://owasp.org/www-project-dependency-check/
             logo: dependencycheck.svg
             description: "Contrôle des dépendances."
             project: alternative
+
+      - name: Conformité & protection des données (RGPD)
+        items:
+          - name: Dastra
+            homepage_url: https://www.dastra.eu
+            logo: placeholder.svg
+            description: "Gestion de la conformité RGPD et ePrivacy (DPIA)."
+            project: recommande
+
+      - name: PKI, certificats & chiffrement
+        items:
+          - name: Certigna
+            homepage_url: https://www.certigna.com
+            logo: placeholder.svg
+            description: "Autorité de certification électronique RGS/eIDAS."
+            project: recommande
+          - name: "ZED!"
+            homepage_url: https://www.primx.eu
+            logo: placeholder.svg
+            description: "Conteneur sécurisé pour la transmission de documents sensibles."
+            project: recommande
+          - name: AXCrypt
+            homepage_url: https://www.axcrypt.net
+            logo: placeholder.svg
+            description: "Chiffrement de fichiers."
+            project: alternative
+
+      - name: Détection & réponse (EDR/SIEM)
+        items:
+          - name: Microsoft Defender
+            homepage_url: https://www.microsoft.com/en-us/security/business/threat-protection/microsoft-defender
+            logo: placeholder.svg
+            description: "Protection contre malwares, ransomwares et phishing sur l'environnement Microsoft."
+            project: recommande
+          - name: Sentinel SIEM
+            homepage_url: https://azure.microsoft.com/en-us/products/microsoft-sentinel
+            logo: placeholder.svg
+            description: "SIEM natif cloud : détection, investigation et réponse aux cybermenaces."
+            project: recommande
+          - name: Wazuh
+            homepage_url: https://wazuh.com
+            logo: placeholder.svg
+            description: "Plateforme open source combinant SIEM et XDR (instances DSI et PSC)."
+            project: recommande
+
+      - name: Pare-feu applicatif (WAF)
+        items:
+          - name: Bunkerweb
+            homepage_url: https://www.bunkerweb.io
+            logo: placeholder.svg
+            description: "Pare-feu applicatif Web (WAF) basé sur NGINX."
+            project: recommande
+
+      - name: CERT & gestion des incidents de sécurité
+        items:
+          - name: Artemis
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Plateforme de cybersurveillance du CERT Santé."
+            project: recommande
+          - name: Infra Incidents et Alertes CERT
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Outils et processus du CERT Santé pour détecter et traiter les incidents de sécurité."
+            project: recommande
 
   - name: Support & Exploitation (ITSM)
     subcategories:
@@ -424,7 +714,7 @@ categories:
           - name: GLPI
             homepage_url: https://glpi-project.org
             logo: placeholder.svg
-            description: "Support et gestion de parc."
+            description: "Support et gestion de parc, open source."
             project: alternative
 
       - name: Gestion des configurations (CMDB)
@@ -432,5 +722,291 @@ categories:
           - name: GLPI
             homepage_url: https://glpi-project.org
             logo: placeholder.svg
-            description: "CMDB et inventaire."
+            description: "CMDB et inventaire de parc, open source."
+            project: recommande
+
+  - name: Ressources Humaines
+    subcategories:
+      - name: Gestion des talents & recrutement
+        items:
+          - name: Foederis
+            homepage_url: https://www.foederis.com
+            logo: placeholder.svg
+            description: "Gestion des talents et entretiens RH, en mode SaaS."
+            project: recommande
+          - name: JobTeaser
+            homepage_url: https://www.jobteaser.com
+            logo: placeholder.svg
+            description: "Plateforme emploi/stages et marque employeur."
+            project: alternative
+          - name: Recruitee
+            homepage_url: https://recruitee.com
+            logo: placeholder.svg
+            description: "Recrutement collaboratif (ATS), de la publication d'offres à l'onboarding."
+            project: alternative
+
+      - name: Administration RH & paie
+        items:
+          - name: MyPeopleDoc
+            homepage_url: https://www.mypeopledoc.com
+            logo: placeholder.svg
+            description: "Coffre-fort numérique RH (fiches de paie, contrats) et automatisation administrative."
+            project: recommande
+          - name: Cegid
+            homepage_url: https://www.cegid.com
+            logo: placeholder.svg
+            description: "Gestion des demandes de congés et de l'administration RH."
+            project: recommande
+
+      - name: Engagement & sondages RH
+        items:
+          - name: Zest (ex Bloomind)
+            homepage_url: https://www.zestmeup.com
+            logo: placeholder.svg
+            description: "Sondages et enquêtes RH pour managers et DRH."
+            project: recommande
+
+      - name: Gestion des espaces de travail
+        items:
+          - name: Deskbird
+            homepage_url: https://www.deskbird.com
+            logo: placeholder.svg
+            description: "Gestion du lieu de travail (flex office, réservation de postes)."
+            project: recommande
+
+  - name: Finance & Comptabilité
+    subcategories:
+      - name: Notes de frais & déplacements
+        items:
+          - name: Notilus
+            homepage_url: https://www.notilus.com
+            logo: placeholder.svg
+            description: "Gestion des notes de frais et déplacements, dématérialisée."
+            project: recommande
+          - name: Eksae
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Saisie et archivage des notes de frais."
+            project: alternative
+
+      - name: ERP & gestion comptable
+        items:
+          - name: Qualiac
+            homepage_url: https://www.qualiac.com
+            logo: placeholder.svg
+            description: "ERP de gestion comptable et financière (suivi budgétaire, engagements, dépenses)."
+            project: recommande
+          - name: Seldon/Winvest
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion comptable du patrimoine (immobilisations), inventaire physique et reporting."
+            project: recommande
+
+  - name: Gestion documentaire & Signature électronique
+    subcategories:
+      - name: Signature électronique
+        items:
+          - name: Yousign
+            homepage_url: https://yousign.com
+            logo: placeholder.svg
+            description: "Signature électronique conforme eIDAS, française."
+            project: recommande
+          - name: Letsignit
+            homepage_url: https://www.letsignit.com
+            logo: placeholder.svg
+            description: "Gestion centralisée des signatures email Office 365."
+            project: alternative
+
+      - name: Archivage électronique (SAE)
+        items:
+          - name: Dexto
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Archivage électronique (SAE)."
+            project: recommande
+          - name: Xelians AM
+            homepage_url: https://www.xelians.fr
+            logo: placeholder.svg
+            description: "Archivage hybride (physique et numérique), traçabilité et valeur probante."
+            project: alternative
+
+      - name: Gestion électronique de documents (GED)
+        items:
+          - name: GED Calypso
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion électronique documentaire basée sur le standard Calypso."
+            project: recommande
+
+  - name: Formation & e-learning
+    subcategories:
+      - name: Plateformes de formation
+        items:
+          - name: Mentor
+            homepage_url: https://mentor.gouv.fr
+            logo: placeholder.svg
+            description: "Plateforme interministérielle de formation en libre-service."
+            project: recommande
+          - name: ANS-formation
+            homepage_url: https://www.coorpacademy.com/ans-formation/
+            logo: placeholder.svg
+            description: "Plateforme de formation en ligne de l'agence."
+            project: recommande
+          - name: Articulate 360
+            homepage_url: https://www.articulate.com/360
+            logo: placeholder.svg
+            description: "Création de modules e-learning."
+            project: alternative
+          - name: Beekast
+            homepage_url: https://beekast.com
+            logo: placeholder.svg
+            description: "Création, animation et suivi de réunions et formations."
+            project: alternative
+
+  - name: Relation client & CRM
+    subcategories:
+      - name: CRM
+        items:
+          - name: Dynamics 365 (SIRC)
+            homepage_url: https://www.microsoft.com/en-us/dynamics-365
+            logo: dynamics365.svg
+            description: "Gestion de la relation client."
+            project: recommande
+          - name: Lemon
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion de la relation client (CRM) et automatisation des ventes, en mode SaaS."
+            project: alternative
+
+  - name: Communication, Marketing & Enquêtes
+    subcategories:
+      - name: Création de contenu
+        items:
+          - name: Canva
+            homepage_url: https://www.canva.com
+            logo: canva.svg
+            description: "Design graphique et création collaborative."
+            project: recommande
+          - name: Adobe Creative Cloud
+            homepage_url: https://www.adobe.com/creativecloud.html
+            logo: adobecreativecloud.svg
+            description: "Suite créative Adobe (plus de 20 applications professionnelles)."
+            project: alternative
+          - name: PlayPlay
+            homepage_url: https://playplay.com
+            logo: placeholder.svg
+            description: "Création vidéo en ligne assistée par IA."
+            project: alternative
+          - name: Kstudio
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion de projets et création de contenus visuels (vidéos, présentations)."
+            project: alternative
+
+      - name: Emailing & campagnes
+        items:
+          - name: Sarbacane
+            homepage_url: https://www.sarbacane.com
+            logo: placeholder.svg
+            description: "Création, envoi et suivi de campagnes email (instances DIRCOM et PSC)."
+            project: recommande
+
+      - name: Sondages & enquêtes
+        items:
+          - name: Lime Survey
+            homepage_url: https://www.limesurvey.org
+            logo: limesurvey.svg
+            description: "Création et gestion de sondages en ligne."
+            project: recommande
+          - name: Eval&Go
+            homepage_url: https://www.evalandgo.com
+            logo: placeholder.svg
+            description: "Sondages, questionnaires et enquêtes en ligne, solution française."
+            project: alternative
+
+      - name: Gestion d'événements
+        items:
+          - name: Wiin.IO
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion des événements et inscriptions en ligne, plateforme SaaS française."
+            project: recommande
+
+  - name: Santé numérique — Applications internes ANS
+    subcategories:
+      - name: Identité numérique & e-CPS
+        items:
+          - name: SEC PSC
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Fournisseur d'identité numérique santé de Pro Santé Connect."
+            project: recommande
+          - name: EDIT
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Éditeur d'identités de test pour l'intégration avec Pro Santé Connect."
+            project: recommande
+          - name: DiagCPS
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Diagnostic en ligne de la lecture des cartes CPx (CPS, CPE)."
+            project: recommande
+          - name: EssaietaEcps
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Simulateur en ligne pour tester l'authentification e-CPS en bac à sable."
+            project: alternative
+
+      - name: Composants & habilitations PSC
+        items:
+          - name: PSC Tools
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Composants techniques liés à ProSantéConnect (extracteurs, connecteurs, portails d'administration)."
+            project: recommande
+          - name: API Credentials
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Gestion des identifiants d'API pour Pro Santé Connect."
+            project: recommande
+          - name: Gestion MIE (ex TMAJ)
+            homepage_url: https://esante.gouv.fr
+            logo: placeholder.svg
+            description: "Modernisation des composants et flux du Centre de Gestion (domaine Gestion MIE & habilitations, SI-CPS)."
+            project: recommande
+
+      - name: Aide à la décision clinique
+        items:
+          - name: Synapse Medecine
+            homepage_url: https://www.synapse-medicine.com
+            logo: placeholder.svg
+            description: "Aide au bon usage du médicament pour les professionnels et établissements de santé."
+            project: recommande
+
+  - name: Poste de travail & Bureautique
+    subcategories:
+      - name: Bureautique & productivité
+        items:
+          - name: Acrobat
+            homepage_url: https://www.adobe.com/acrobat.html
+            logo: adobeacrobatreader.svg
+            description: "Lecture et édition de documents PDF."
+            project: recommande
+          - name: 7 Zip
+            homepage_url: https://www.7-zip.org
+            logo: 7zip.svg
+            description: "Compression et décompression, open source."
+            project: recommande
+          - name: Notepad++
+            homepage_url: https://notepad-plus-plus.org
+            logo: notepadplusplus.svg
+            description: "Éditeur de texte et de code source, open source."
+            project: alternative
+
+      - name: Assistance à distance
+        items:
+          - name: TeamViewer
+            homepage_url: https://www.teamviewer.com
+            logo: teamviewer.svg
+            description: "Prise en main et assistance à distance sécurisées."
             project: recommande

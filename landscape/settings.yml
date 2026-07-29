@@ -26,16 +26,17 @@ colors:
   color6: "rgba(0, 42, 81, 0.7)"
   color7: "rgba(180, 219, 255, 1)"
 
-# TODO : une fois le logo ANS disponible (SVG), décommenter et pointer vers
-# son URL ou son chemin local pour l'afficher dans l'en-tête et le pied de
-# page du site.
-# header:
-#   logo: "https://exemple.fr/logo-ans.svg"
-#   links:
-#     homepage: "https://esante.gouv.fr"
-#
+# Le logo ANS est résolu par landscape2 relativement au répertoire courant
+# au moment du `landscape2 build` (voir README.md) — donc "logos/ans.png"
+# suppose que la commande est lancée depuis ce dossier (landscape/).
+header:
+  logo: "logos/ans.png"
+  links:
+    homepage: "https://esante.gouv.fr"
+
+# TODO : décommenter pour afficher aussi le logo ANS dans le pied de page.
 # footer:
-#   logo: "https://exemple.fr/logo-ans.svg"
+#   logo: "logos/ans.png"
 #   links:
 #     homepage: "https://esante.gouv.fr"
 
@@ -44,7 +45,8 @@ grid_items_size: medium
 
 # Onglets qui regroupent les catégories par domaine. Chaque catégorie de
 # data.yml doit apparaître dans au moins un groupe pour rester visible en
-# mode grille — c'est le cas ici (7 catégories couvertes par les 5 groupes).
+# mode grille — c'est le cas ici (16 catégories couvertes par les groupes
+# ci-dessous).
 groups:
   - name: Tous les outils
     categories:
@@ -56,6 +58,14 @@ groups:
       - APIs & Interopérabilité
       - Sécurité & Identité
       - Support & Exploitation (ITSM)
+      - Ressources Humaines
+      - Finance & Comptabilité
+      - Gestion documentaire & Signature électronique
+      - Formation & e-learning
+      - Relation client & CRM
+      - Communication, Marketing & Enquêtes
+      - Santé numérique — Applications internes ANS
+      - Poste de travail & Bureautique
 
   - name: Développement & DevOps
     categories:
@@ -75,3 +85,24 @@ groups:
     categories:
       - Sécurité & Identité
       - Données & Analytique
+
+  - name: Fonctions support (RH, Finance, Formation)
+    categories:
+      - Ressources Humaines
+      - Finance & Comptabilité
+      - Formation & e-learning
+
+  - name: Communication & Documents
+    categories:
+      - Communication, Marketing & Enquêtes
+      - Relation client & CRM
+      - Gestion documentaire & Signature électronique
+
+  - name: Santé numérique
+    categories:
+      - Santé numérique — Applications internes ANS
+
+  - name: Exploitation & Support utilisateur
+    categories:
+      - Support & Exploitation (ITSM)
+      - Poste de travail & Bureautique

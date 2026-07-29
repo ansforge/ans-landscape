@@ -47,11 +47,60 @@ categories:
 
   - category: "Sécurité & Identité"
     content: |
-      Gestion des identités et des accès (IAM), des secrets et des
-      vulnérabilités. À consulter systématiquement dès qu'un projet manipule
-      des identifiants, des secrets ou expose un service.
+      Gestion des identités et des accès (IAM), des secrets, des
+      vulnérabilités, conformité RGPD, PKI/chiffrement, détection et réponse
+      (EDR/SIEM), pare-feu applicatif et gestion des incidents (CERT). À
+      consulter systématiquement dès qu'un projet manipule des identifiants,
+      des secrets ou expose un service.
 
   - category: "Support & Exploitation (ITSM)"
     content: |
       Outils de ticketing/helpdesk et de gestion des configurations (CMDB)
       pour le support aux utilisateurs et le suivi du parc applicatif.
+
+  - category: "Ressources Humaines"
+    content: |
+      Outils de recrutement, d'administration RH, d'engagement des équipes
+      et de gestion des espaces de travail. Point d'entrée pour toute
+      solution touchant au cycle de vie des collaborateurs.
+
+  - category: "Finance & Comptabilité"
+    content: |
+      Notes de frais, déplacements, ERP et gestion comptable/financière.
+      À consulter pour tout besoin de suivi budgétaire ou de gestion du
+      patrimoine.
+
+  - category: "Gestion documentaire & Signature électronique"
+    content: |
+      Signature électronique, archivage électronique (SAE) et gestion
+      électronique de documents (GED). À utiliser dès qu'un processus
+      nécessite de faire signer, tracer ou conserver durablement un document.
+
+  - category: "Formation & e-learning"
+    content: |
+      Plateformes de formation, création de modules e-learning et animation
+      de sessions. Point de départ pour tout projet de montée en compétence
+      ou de sensibilisation des agents.
+
+  - category: "Relation client & CRM"
+    content: |
+      Outils de gestion de la relation client et d'automatisation des
+      processus commerciaux ou de suivi des contacts.
+
+  - category: "Communication, Marketing & Enquêtes"
+    content: |
+      Création de contenu, emailing, sondages/enquêtes et gestion
+      d'événements. À consulter pour toute action de communication interne
+      ou externe.
+
+  - category: "Santé numérique — Applications internes ANS"
+    content: |
+      Applications développées ou opérées par l'ANS autour de l'identité
+      numérique en santé (Pro Santé Connect, e-CPS) et de l'aide à la
+      décision clinique. Ces outils sont spécifiques à l'agence et n'ont
+      généralement pas d'alternative de marché équivalente.
+
+  - category: "Poste de travail & Bureautique"
+    content: |
+      Outils bureautiques du quotidien et assistance à distance pour les
+      utilisateurs finaux.

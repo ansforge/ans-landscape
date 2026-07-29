@@ -13,22 +13,32 @@ sous-catégorie**, pour aider à choisir le bon outil plutôt qu'à explorer un
 - `guide.yml` — texte explicatif par catégorie (page `/guide`)
 - `logos/` — un fichier SVG par outil, référencé par son nom de fichier dans `data.yml`
 
-## Contenu actuel : des exemples, pas les choix officiels de l'ANS
+## Contenu actuel : inventaire réel de l'ANS + quelques exemples de marché
 
-`data.yml` contient actuellement 66 outils réels et connus du marché,
-répartis dans 8 catégories (dont "APIs & Interopérabilité"), pour montrer à
-quoi ressemble un landscape rempli et comment fonctionnent les statuts.
-**Ces choix sont illustratifs** — ils ne reflètent pas une décision
-officielle de l'ANS. Il faut les revoir et les ajuster (statuts, outils
-présents/absents) selon la politique réelle de l'agence avant mise en
-production.
+`data.yml` contient 157 outils répartis dans 16 catégories. La grande
+majorité (~115) provient de l'inventaire applicatif réel de l'ANS
+(`MApplication-20260729.xlsx`, export d'une cartographie applicative) :
+chaque application y a été rattachée à une catégorie/sous-catégorie, avec
+son statut déduit de son usage effectif (`recommande` par défaut pour un
+outil en production, `alternative` pour un usage plus ponctuel). Les
+instances multiples d'un même produit (ex. Jira ANS/Ségur, Confluence
+ANS/Ségur, SharePoint Région/Ségur Numérique, N8N interne/Ségur, Wazuh
+DSI/PSC, Squash TM ANS/référencement MES/Ségur) ont été fusionnées en une
+seule entrée pour éviter les doublons.
+
+Le reste (~40 outils, essentiellement dans les catégories Développement,
+DevOps, IA, Données et APIs) provient d'une itération précédente basée sur
+des outils de marché illustratifs — **à confirmer ou retirer** selon la
+politique effective de l'agence.
 
 Les logos proviennent du projet [simple-icons](https://simpleicons.org)
 (licence CC0, réutilisation libre), recolorés avec la couleur de marque
-officielle de chaque éditeur (voir section suivante). 7 outils n'ont pas de
-logo disponible dans simple-icons et utilisent `logos/placeholder.svg` en
-attendant un logo officiel : Microsoft Planner, Squash TM, Loki, Microsoft
-365 Copilot, Gravitee, ReadyAPI, Microsoft Entra ID, ainsi que GLPI.
+officielle de chaque éditeur (voir section suivante). 74 outils sur 157
+n'ont pas de logo disponible dans simple-icons — notamment la plupart des
+applications internes ANS (Pro Santé Connect, CERT Santé, cartographie du
+SI), des éditeurs RH/finance français peu connus du grand public, et
+certains produits Microsoft/Dell/Fortinet — et utilisent
+`logos/placeholder.svg` en attendant un logo officiel.
 
 ## Logos en couleur
 
@@ -121,9 +131,11 @@ Build and deployment → Source**, sélectionner **GitHub Actions**.
 
 ## À faire avant mise en production
 
-- [ ] Revoir les 66 outils d'exemple (présence, statut recommande/alternative/deprecie) et les remplacer par les choix réels/officiels de l'ANS
-- [ ] Fournir un logo pour les 7 outils en `placeholder.svg` (Microsoft Planner, Squash TM, Loki, Microsoft 365 Copilot, Gravitee, ReadyAPI, Microsoft Entra ID) et pour GLPI
+- [ ] Valider les statuts recommande/alternative/deprecie déduits automatiquement de l'inventaire (une présence dans le CMDB ne garantit pas qu'un outil doive rester "recommandé")
+- [ ] Revoir/retirer les ~40 outils de marché illustratifs (surtout dans Développement, DevOps, IA, Données, APIs) qui ne viennent pas de l'inventaire réel
+- [ ] Fournir un logo officiel pour les outils en `placeholder.svg` (applications internes ANS, éditeurs peu répandus, etc.)
 - [ ] Remplacer les couleurs de `settings.yml` par la charte graphique ANS
-- [ ] Ajouter le logo ANS dans `settings.yml` (`header.logo` / `footer.logo`)
+- [x] Ajouter le logo ANS dans `settings.yml` (`header.logo`) — `logos/ans.png`, affiché en haut à gauche
+- [ ] Éventuellement aussi l'afficher en pied de page (`footer.logo`, actuellement commenté dans `settings.yml`)
 - [ ] Mettre à jour `url` dans `settings.yml` avec l'URL définitive d'hébergement
 - [ ] Activer GitHub Pages avec la source "GitHub Actions" (Settings → Pages)

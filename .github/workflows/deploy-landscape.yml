@@ -42,26 +42,30 @@ jobs:
       # root maps straight to host root here; output files keep the default
       # world-readable permissions so the later upload step (non-root) can
       # still read them.
+      # Run with the working directory set to landscape/ (not the repo root) so
+      # that relative paths in settings.yml (e.g. header.logo: "logos/ans.png",
+      # resolved by landscape2 against its own CWD, not against settings.yml's
+      # location) match exactly what the README's local build instructions use.
       - name: Validate landscape data sources
         run: |
           docker run --rm --user root \
-            -v "${{ github.workspace }}:/workspace" -w /workspace \
+            -v "${{ github.workspace }}:/workspace" -w /workspace/landscape \
             "$LANDSCAPE2_IMAGE" sh -c '
-              landscape2 validate data --data-file landscape/data.yml &&
-              landscape2 validate settings --settings-file landscape/settings.yml &&
-              landscape2 validate guide --guide-file landscape/guide.yml
+              landscape2 validate data --data-file data.yml &&
+              landscape2 validate settings --settings-file settings.yml &&
+              landscape2 validate guide --guide-file guide.yml
             '
 
       - name: Build landscape website
         run: |
           docker run --rm --user root \
-            -v "${{ github.workspace }}:/workspace" -w /workspace \
+            -v "${{ github.workspace }}:/workspace" -w /workspace/landscape \
             "$LANDSCAPE2_IMAGE" landscape2 build \
-              --data-file landscape/data.yml \
-              --settings-file landscape/settings.yml \
-              --guide-file landscape/guide.yml \
-              --logos-path landscape/logos \
-              --output-dir landscape/build
+              --data-file data.yml \
+              --settings-file settings.yml \
+              --guide-file guide.yml \
+              --logos-path logos \
+              --output-dir build
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3

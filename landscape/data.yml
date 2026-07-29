@@ -30,7 +30,7 @@ categories:
             project: alternative
           - name: Canopée
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion de projets et portefeuilles."
             project: alternative
           - name: Clickup
@@ -71,7 +71,7 @@ categories:
             project: recommande
           - name: Intranet ANS
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Plateforme interne de l'agence (actualités, offres de service, pages thématiques), bâtie sur SharePoint via Powell Software."
             project: recommande
           - name: Google Workspace (Docs/Drive)
@@ -117,12 +117,12 @@ categories:
             project: alternative
           - name: MindManager
             homepage_url: https://www.mindmanager.com
-            logo: placeholder.svg
+            logo: favicon-mindmanager-com.png
             description: "Cartographie mentale et visualisation d'informations sous forme de cartes heuristiques."
             project: alternative
           - name: Klaxoon
             homepage_url: https://klaxoon.com
-            logo: placeholder.svg
+            logo: favicon-klaxoon-com.png
             description: "Suite collaborative interactive (tableaux blancs, sondages, réunions)."
             project: alternative
 
@@ -212,7 +212,7 @@ categories:
         items:
           - name: Squash TM
             homepage_url: https://www.squashtest.com
-            logo: placeholder.svg
+            logo: favicon-squashtest-com.png
             description: "Gestion du patrimoine de tests (instances ANS, Ségur, référencement MES)."
             project: recommande
 
@@ -220,12 +220,12 @@ categories:
         items:
           - name: Sparx Enterprise Architect
             homepage_url: https://sparxsystems.com/products/ea/
-            logo: placeholder.svg
+            logo: favicon-sparxsystems-com.png
             description: "Modélisation et cartographie (UML, BPMN, ArchiMate)."
             project: recommande
           - name: Mercator
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Cartographie du système d'information de l'agence."
             project: recommande
           - name: Modelio
@@ -304,7 +304,7 @@ categories:
         items:
           - name: Rudder
             homepage_url: https://www.rudder.io
-            logo: placeholder.svg
+            logo: favicon-rudder-io.png
             description: "Gestion de configuration et de conformité automatisée des systèmes."
             project: recommande
           - name: N8N
@@ -355,12 +355,12 @@ categories:
             project: recommande
           - name: Loki
             homepage_url: https://grafana.com/oss/loki/
-            logo: placeholder.svg
+            logo: favicon-grafana-com.png
             description: "Centralisation des logs."
             project: recommande
           - name: Zabbix
             homepage_url: https://www.zabbix.com
-            logo: placeholder.svg
+            logo: favicon-zabbix-com.png
             description: "Supervision centralisée en temps réel (serveurs, réseaux, bases de données)."
             project: alternative
           - name: Elasticsearch
@@ -388,12 +388,12 @@ categories:
             project: recommande
           - name: PulseSecure
             homepage_url: https://www.ivanti.com/products/connect-secure-vpn
-            logo: placeholder.svg
+            logo: favicon-ivanti-com.png
             description: "VPN sécurisé pour l'accès distant aux ressources internes."
             project: alternative
           - name: mRemoteNG
             homepage_url: https://mremoteng.org
-            logo: placeholder.svg
+            logo: favicon-mremoteng-org.png
             description: "Gestionnaire de connexions à distance multi-protocoles (RDP, VNC, SSH)."
             project: alternative
 
@@ -401,7 +401,7 @@ categories:
         items:
           - name: DNS AD
             homepage_url: https://learn.microsoft.com/en-us/windows-server/networking/dns/dns-top
-            logo: placeholder.svg
+            logo: favicon-learn-microsoft-com.png
             description: "Registre de noms Active Directory."
             project: recommande
           - name: DNS GANDI
@@ -411,7 +411,7 @@ categories:
             project: recommande
           - name: AD Manager
             homepage_url: https://www.manageengine.com/products/ad-manager/
-            logo: placeholder.svg
+            logo: favicon-manageengine-com.png
             description: "Administration et sécurisation des annuaires Active Directory."
             project: alternative
 
@@ -424,7 +424,7 @@ categories:
             project: recommande
           - name: VXRail
             homepage_url: https://www.dell.com/en-us/shop/dell-vxrail
-            logo: placeholder.svg
+            logo: dell.svg
             description: "Infrastructure hyperconvergée (Dell EMC/VMware)."
             project: recommande
           - name: Proxmox
@@ -442,7 +442,7 @@ categories:
         items:
           - name: PowerProtect Data Manager
             homepage_url: https://www.dell.com/en-us/dt/data-protection/powerprotect-data-manager.htm
-            logo: placeholder.svg
+            logo: dell.svg
             description: "Sauvegarde, restauration et conformité des données."
             project: recommande
 
@@ -450,12 +450,12 @@ categories:
         items:
           - name: Intune
             homepage_url: https://www.microsoft.com/en-us/security/business/endpoint-management/microsoft-intune
-            logo: placeholder.svg
+            logo: favicon-microsoft-com.png
             description: "Gestion unifiée des terminaux (MDM) Microsoft."
             project: recommande
           - name: FollowMe
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Serveur d'impression centralisé."
             project: alternative
 
@@ -463,7 +463,7 @@ categories:
         items:
           - name: Xibo
             homepage_url: https://xibosignage.com
-            logo: placeholder.svg
+            logo: favicon-xibosignage-com.png
             description: "Système open source d'affichage dynamique (digital signage)."
             project: recommande
 
@@ -478,7 +478,7 @@ categories:
             project: recommande
           - name: Microsoft 365 Copilot
             homepage_url: https://www.microsoft.com/microsoft-365/copilot
-            logo: placeholder.svg
+            logo: favicon-microsoft-com.png
             description: "Assistant IA Microsoft 365."
             project: recommande
           - name: GitHub Copilot
@@ -552,7 +552,7 @@ categories:
             project: recommande
           - name: Piano Analytics
             homepage_url: https://www.piano.io/product/analytics/
-            logo: placeholder.svg
+            logo: favicon-piano-io.png
             description: "Mesure d'audience et analytics web."
             project: alternative
           - name: Mixpanel
@@ -567,7 +567,7 @@ categories:
         items:
           - name: Gravitee
             homepage_url: https://www.gravitee.io
-            logo: placeholder.svg
+            logo: favicon-gravitee-io.png
             description: "API Management."
             project: recommande
           - name: Swagger OpenAPI
@@ -582,7 +582,7 @@ categories:
             project: alternative
           - name: ReadyAPI
             homepage_url: https://smartbear.com/product/ready-api/overview/
-            logo: placeholder.svg
+            logo: favicon-smartbear-com.png
             description: "Tests automatisés pour API REST dans les environnements de validation des services numériques de santé."
             project: alternative
 
@@ -590,12 +590,12 @@ categories:
         items:
           - name: Art Decor
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Conception, maintien et publication de spécifications d'interopérabilité en santé numérique."
             project: recommande
           - name: Cobaz
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Consultation et gestion des normes industrielles ou métiers."
             project: alternative
 
@@ -610,7 +610,7 @@ categories:
             project: recommande
           - name: Microsoft Entra ID
             homepage_url: https://www.microsoft.com/security/business/identity-access/microsoft-entra-id
-            logo: placeholder.svg
+            logo: favicon-microsoft-com.png
             description: "Gestion des identités et des accès basée sur le cloud (anciennement Azure AD)."
             project: alternative
 
@@ -641,7 +641,7 @@ categories:
         items:
           - name: Dastra
             homepage_url: https://www.dastra.eu
-            logo: placeholder.svg
+            logo: favicon-dastra-eu.png
             description: "Gestion de la conformité RGPD et ePrivacy (DPIA)."
             project: recommande
 
@@ -649,17 +649,17 @@ categories:
         items:
           - name: Certigna
             homepage_url: https://www.certigna.com
-            logo: placeholder.svg
+            logo: favicon-certigna-com.png
             description: "Autorité de certification électronique RGS/eIDAS."
             project: recommande
           - name: "ZED!"
             homepage_url: https://www.primx.eu
-            logo: placeholder.svg
+            logo: favicon-primx-eu.png
             description: "Conteneur sécurisé pour la transmission de documents sensibles."
             project: recommande
           - name: AXCrypt
             homepage_url: https://www.axcrypt.net
-            logo: placeholder.svg
+            logo: favicon-axcrypt-net.png
             description: "Chiffrement de fichiers."
             project: alternative
 
@@ -667,17 +667,17 @@ categories:
         items:
           - name: Microsoft Defender
             homepage_url: https://www.microsoft.com/en-us/security/business/threat-protection/microsoft-defender
-            logo: placeholder.svg
+            logo: favicon-microsoft-com.png
             description: "Protection contre malwares, ransomwares et phishing sur l'environnement Microsoft."
             project: recommande
           - name: Sentinel SIEM
             homepage_url: https://azure.microsoft.com/en-us/products/microsoft-sentinel
-            logo: placeholder.svg
+            logo: favicon-azure-microsoft-com.png
             description: "SIEM natif cloud : détection, investigation et réponse aux cybermenaces."
             project: recommande
           - name: Wazuh
             homepage_url: https://wazuh.com
-            logo: placeholder.svg
+            logo: favicon-wazuh-com.png
             description: "Plateforme open source combinant SIEM et XDR (instances DSI et PSC)."
             project: recommande
 
@@ -685,7 +685,7 @@ categories:
         items:
           - name: Bunkerweb
             homepage_url: https://www.bunkerweb.io
-            logo: placeholder.svg
+            logo: favicon-bunkerweb-io.png
             description: "Pare-feu applicatif Web (WAF) basé sur NGINX."
             project: recommande
 
@@ -693,12 +693,12 @@ categories:
         items:
           - name: Artemis
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Plateforme de cybersurveillance du CERT Santé."
             project: recommande
           - name: Infra Incidents et Alertes CERT
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Outils et processus du CERT Santé pour détecter et traiter les incidents de sécurité."
             project: recommande
 
@@ -713,7 +713,7 @@ categories:
             project: recommande
           - name: GLPI
             homepage_url: https://glpi-project.org
-            logo: placeholder.svg
+            logo: favicon-glpi-project-org.png
             description: "Support et gestion de parc, open source."
             project: alternative
 
@@ -721,7 +721,7 @@ categories:
         items:
           - name: GLPI
             homepage_url: https://glpi-project.org
-            logo: placeholder.svg
+            logo: favicon-glpi-project-org.png
             description: "CMDB et inventaire de parc, open source."
             project: recommande
 
@@ -731,17 +731,17 @@ categories:
         items:
           - name: Foederis
             homepage_url: https://www.foederis.com
-            logo: placeholder.svg
+            logo: favicon-foederis-com.png
             description: "Gestion des talents et entretiens RH, en mode SaaS."
             project: recommande
           - name: JobTeaser
             homepage_url: https://www.jobteaser.com
-            logo: placeholder.svg
+            logo: favicon-jobteaser-com.png
             description: "Plateforme emploi/stages et marque employeur."
             project: alternative
           - name: Recruitee
             homepage_url: https://recruitee.com
-            logo: placeholder.svg
+            logo: favicon-recruitee-com.png
             description: "Recrutement collaboratif (ATS), de la publication d'offres à l'onboarding."
             project: alternative
 
@@ -749,12 +749,12 @@ categories:
         items:
           - name: MyPeopleDoc
             homepage_url: https://www.mypeopledoc.com
-            logo: placeholder.svg
+            logo: favicon-mypeopledoc-com.png
             description: "Coffre-fort numérique RH (fiches de paie, contrats) et automatisation administrative."
             project: recommande
           - name: Cegid
             homepage_url: https://www.cegid.com
-            logo: placeholder.svg
+            logo: favicon-cegid-com.png
             description: "Gestion des demandes de congés et de l'administration RH."
             project: recommande
 
@@ -762,7 +762,7 @@ categories:
         items:
           - name: Zest (ex Bloomind)
             homepage_url: https://www.zestmeup.com
-            logo: placeholder.svg
+            logo: favicon-zestmeup-com.png
             description: "Sondages et enquêtes RH pour managers et DRH."
             project: recommande
 
@@ -770,7 +770,7 @@ categories:
         items:
           - name: Deskbird
             homepage_url: https://www.deskbird.com
-            logo: placeholder.svg
+            logo: favicon-deskbird-com.png
             description: "Gestion du lieu de travail (flex office, réservation de postes)."
             project: recommande
 
@@ -780,12 +780,12 @@ categories:
         items:
           - name: Notilus
             homepage_url: https://www.notilus.com
-            logo: placeholder.svg
+            logo: favicon-notilus-com.png
             description: "Gestion des notes de frais et déplacements, dématérialisée."
             project: recommande
           - name: Eksae
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Saisie et archivage des notes de frais."
             project: alternative
 
@@ -798,7 +798,7 @@ categories:
             project: recommande
           - name: Seldon/Winvest
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion comptable du patrimoine (immobilisations), inventaire physique et reporting."
             project: recommande
 
@@ -808,12 +808,12 @@ categories:
         items:
           - name: Yousign
             homepage_url: https://yousign.com
-            logo: placeholder.svg
+            logo: favicon-yousign-com.png
             description: "Signature électronique conforme eIDAS, française."
             project: recommande
           - name: Letsignit
             homepage_url: https://www.letsignit.com
-            logo: placeholder.svg
+            logo: favicon-letsignit-com.png
             description: "Gestion centralisée des signatures email Office 365."
             project: alternative
 
@@ -821,12 +821,12 @@ categories:
         items:
           - name: Dexto
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Archivage électronique (SAE)."
             project: recommande
           - name: Xelians AM
             homepage_url: https://www.xelians.fr
-            logo: placeholder.svg
+            logo: favicon-xelians-fr.png
             description: "Archivage hybride (physique et numérique), traçabilité et valeur probante."
             project: alternative
 
@@ -834,7 +834,7 @@ categories:
         items:
           - name: GED Calypso
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion électronique documentaire basée sur le standard Calypso."
             project: recommande
 
@@ -844,22 +844,22 @@ categories:
         items:
           - name: Mentor
             homepage_url: https://mentor.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-mentor-gouv-fr.png
             description: "Plateforme interministérielle de formation en libre-service."
             project: recommande
           - name: ANS-formation
             homepage_url: https://www.coorpacademy.com/ans-formation/
-            logo: placeholder.svg
+            logo: favicon-coorpacademy-com.png
             description: "Plateforme de formation en ligne de l'agence."
             project: recommande
           - name: Articulate 360
             homepage_url: https://www.articulate.com/360
-            logo: placeholder.svg
+            logo: favicon-articulate-com.png
             description: "Création de modules e-learning."
             project: alternative
           - name: Beekast
             homepage_url: https://beekast.com
-            logo: placeholder.svg
+            logo: favicon-beekast-com.png
             description: "Création, animation et suivi de réunions et formations."
             project: alternative
 
@@ -874,7 +874,7 @@ categories:
             project: recommande
           - name: Lemon
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion de la relation client (CRM) et automatisation des ventes, en mode SaaS."
             project: alternative
 
@@ -894,12 +894,12 @@ categories:
             project: alternative
           - name: PlayPlay
             homepage_url: https://playplay.com
-            logo: placeholder.svg
+            logo: favicon-playplay-com.png
             description: "Création vidéo en ligne assistée par IA."
             project: alternative
           - name: Kstudio
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion de projets et création de contenus visuels (vidéos, présentations)."
             project: alternative
 
@@ -907,7 +907,7 @@ categories:
         items:
           - name: Sarbacane
             homepage_url: https://www.sarbacane.com
-            logo: placeholder.svg
+            logo: favicon-sarbacane-com.png
             description: "Création, envoi et suivi de campagnes email (instances DIRCOM et PSC)."
             project: recommande
 
@@ -920,7 +920,7 @@ categories:
             project: recommande
           - name: Eval&Go
             homepage_url: https://www.evalandgo.com
-            logo: placeholder.svg
+            logo: favicon-evalandgo-com.png
             description: "Sondages, questionnaires et enquêtes en ligne, solution française."
             project: alternative
 
@@ -928,7 +928,7 @@ categories:
         items:
           - name: Wiin.IO
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion des événements et inscriptions en ligne, plateforme SaaS française."
             project: recommande
 
@@ -938,22 +938,22 @@ categories:
         items:
           - name: SEC PSC
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Fournisseur d'identité numérique santé de Pro Santé Connect."
             project: recommande
           - name: EDIT
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Éditeur d'identités de test pour l'intégration avec Pro Santé Connect."
             project: recommande
           - name: DiagCPS
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Diagnostic en ligne de la lecture des cartes CPx (CPS, CPE)."
             project: recommande
           - name: EssaietaEcps
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Simulateur en ligne pour tester l'authentification e-CPS en bac à sable."
             project: alternative
 
@@ -961,17 +961,17 @@ categories:
         items:
           - name: PSC Tools
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Composants techniques liés à ProSantéConnect (extracteurs, connecteurs, portails d'administration)."
             project: recommande
           - name: API Credentials
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Gestion des identifiants d'API pour Pro Santé Connect."
             project: recommande
           - name: Gestion MIE (ex TMAJ)
             homepage_url: https://esante.gouv.fr
-            logo: placeholder.svg
+            logo: favicon-esante-gouv-fr.png
             description: "Modernisation des composants et flux du Centre de Gestion (domaine Gestion MIE & habilitations, SI-CPS)."
             project: recommande
 
@@ -979,7 +979,7 @@ categories:
         items:
           - name: Synapse Medecine
             homepage_url: https://www.synapse-medicine.com
-            logo: placeholder.svg
+            logo: favicon-synapse-medicine-com.png
             description: "Aide au bon usage du médicament pour les professionnels et établissements de santé."
             project: recommande
 

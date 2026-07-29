@@ -11,7 +11,7 @@ sous-catégorie**, pour aider à choisir le bon outil plutôt qu'à explorer un
 - `data.yml` — catégories, sous-catégories et outils affichés
 - `settings.yml` — branding, onglets ("groups"), mode d'affichage
 - `guide.yml` — texte explicatif par catégorie (page `/guide`)
-- `logos/` — un fichier SVG par outil, référencé par son nom de fichier dans `data.yml`
+- `logos/` — un fichier logo par outil (SVG ou PNG), référencé par son nom de fichier dans `data.yml`
 
 ## Contenu actuel : inventaire réel de l'ANS + quelques exemples de marché
 
@@ -31,22 +31,16 @@ DevOps, IA, Données et APIs) provient d'une itération précédente basée sur
 des outils de marché illustratifs — **à confirmer ou retirer** selon la
 politique effective de l'agence.
 
-Les logos proviennent du projet [simple-icons](https://simpleicons.org)
-(licence CC0, réutilisation libre), recolorés avec la couleur de marque
-officielle de chaque éditeur (voir section suivante). 74 outils sur 157
-n'ont pas de logo disponible dans simple-icons — notamment la plupart des
-applications internes ANS (Pro Santé Connect, CERT Santé, cartographie du
-SI), des éditeurs RH/finance français peu connus du grand public, et
-certains produits Microsoft/Dell/Fortinet — et utilisent
-`logos/placeholder.svg` en attendant un logo officiel.
+Les logos suivent une cascade à 3 niveaux (voir section suivante) :
+1. **simple-icons** (vecteur, recoloré à la couleur de marque officielle) quand l'outil y est référencé — la majorité des outils "de marché" bien connus.
+2. **Favicon du site officiel** (PNG, récupéré automatiquement) pour les outils absents de simple-icons mais ayant un site public — la plupart des applications internes ANS, éditeurs RH/finance français, produits Microsoft/Dell/Fortinet, etc.
+3. **`logos/placeholder.svg`** (gris générique) en dernier recours, seulement pour 3 outils dont le favicon n'a pas pu être récupéré (Modelio, Greenbone, Qualiac).
 
-## Logos en couleur
+## Logos : cascade simple-icons → favicon → placeholder
 
-Les fichiers SVG de simple-icons sont livrés en une seule couleur, sans
-attribut `fill` (ils apparaissent noirs par défaut). Pour obtenir des logos
-en couleur, un attribut `fill="#RRGGBB"` a été ajouté sur la balise `<svg>`
-racine de chaque fichier, avec la couleur de marque officielle (hex).
-Pour un nouvel outil trouvé sur simple-icons :
+**1. simple-icons** — les SVG sont livrés en une seule couleur, sans
+attribut `fill` (noir par défaut). Un attribut `fill="#RRGGBB"` est ajouté
+sur la balise `<svg>` racine avec la couleur de marque officielle :
 
 1. Télécharger le SVG monochrome :
    `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<slug>.svg`
@@ -55,11 +49,28 @@ Pour un nouvel outil trouvé sur simple-icons :
    (chercher par `slug`, champ `hex`).
 3. Ajouter `fill="#<hex>"` juste après `<svg` dans le fichier.
 
-Quelques marques (ex. la suite Microsoft 365, AWS, OpenAI, Power BI) ont un
-fichier d'icône dans simple-icons mais n'apparaissent plus dans son
-catalogue de couleurs officielles (retraits pour raisons de marque) — dans
-ce cas une couleur de marque publique et largement documentée a été utilisée
-manuellement.
+Quelques marques (ex. la suite Microsoft 365, AWS, OpenAI, Power BI, Adobe,
+Canva, Dynamics 365) ont un fichier d'icône dans simple-icons mais
+n'apparaissent plus dans son catalogue de couleurs officielles (retraits
+pour raisons de marque) — dans ce cas une couleur de marque publique et
+largement documentée a été utilisée manuellement.
+
+**2. Favicon** — pour un outil absent de simple-icons, le favicon de son
+site officiel est récupéré via le service de Google (fonctionne aussi pour
+les sites sans `/favicon.ico` classique) :
+
+```
+https://www.google.com/s2/favicons?domain=<domaine>&sz=128
+```
+
+Le fichier est enregistré en PNG sous `logos/favicon-<domaine-avec-tirets>.png`
+(ex. `favicon-esante-gouv-fr.png` pour `esante.gouv.fr`). Plusieurs outils
+partageant le même domaine (ex. toutes les applications internes ANS sans
+site dédié, réglées sur `esante.gouv.fr`) réutilisent le même fichier.
+
+**3. Placeholder** — si ni simple-icons ni le favicon ne donnent de
+résultat exploitable (404, icône générique non pertinente), l'outil garde
+`logos/placeholder.svg`.
 
 ## Ajouter ou modifier un outil
 
@@ -75,9 +86,9 @@ manuellement.
    - `recommande` — le choix par défaut de l'ANS pour ce besoin
    - `alternative` — accepté, utilisable dans des contextes spécifiques
    - `deprecie` — à éviter pour de nouveaux usages / en cours de sortie
-2. Déposez un logo au format **SVG uniquement** dans `logos/`, nommé comme
-   la valeur du champ `logo` (essayer `https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/<slug>.svg`
-   avant de fabriquer un logo, beaucoup d'éditeurs y sont déjà référencés).
+2. Déposez un logo dans `logos/` (SVG recoloré via simple-icons de
+   préférence, sinon un favicon PNG via le service Google — voir section
+   précédente), nommé comme la valeur du champ `logo`.
 3. Gardez la description à une seule phrase.
 4. Ne dépassez pas 5 outils par sous-catégorie — c'est ce qui garde le
    landscape lisible et utile pour trancher rapidement.
@@ -133,7 +144,7 @@ Build and deployment → Source**, sélectionner **GitHub Actions**.
 
 - [ ] Valider les statuts recommande/alternative/deprecie déduits automatiquement de l'inventaire (une présence dans le CMDB ne garantit pas qu'un outil doive rester "recommandé")
 - [ ] Revoir/retirer les ~40 outils de marché illustratifs (surtout dans Développement, DevOps, IA, Données, APIs) qui ne viennent pas de l'inventaire réel
-- [ ] Fournir un logo officiel pour les outils en `placeholder.svg` (applications internes ANS, éditeurs peu répandus, etc.)
+- [ ] Fournir un logo officiel pour Modelio, Greenbone et Qualiac (les 3 seuls outils encore en `placeholder.svg`) et vérifier que les favicons récupérés automatiquement restent pertinents
 - [ ] Remplacer les couleurs de `settings.yml` par la charte graphique ANS
 - [x] Ajouter le logo ANS dans `settings.yml` (`header.logo`) — `logos/ans.png`, affiché en haut à gauche
 - [ ] Éventuellement aussi l'afficher en pied de page (`footer.logo`, actuellement commenté dans `settings.yml`)

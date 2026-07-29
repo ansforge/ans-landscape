@@ -40,11 +40,15 @@ header:
 #   links:
 #     homepage: "https://esante.gouv.fr"
 
-# "grid" (défaut du template) n'affiche que les logos, sans nom ni badge de
-# statut visibles (il faut survoler/cliquer une icône pour les voir). "card"
-# affiche nom, description et badge recommande/alternative/deprecie
-# directement sur chaque carte — c'est ce qu'on veut ici.
-view_mode: card
+# Vue dense en icônes par défaut. Le nom de l'outil et la couleur de statut
+# (recommande=vert / alternative=orange / deprecie=rouge) sont affichés dans
+# un bandeau sous chaque logo — personnalisation du composant grille de
+# landscape2 (voir ui/webapp/src/layout/explore/grid/GridItem.tsx), pas un
+# réglage standard de l'outil. Nécessite l'image landscape2 construite
+# depuis ce dépôt (voir déploiement dans README.md), pas l'image CNCF
+# officielle qui ne contient pas cette personnalisation.
+view_mode: grid
+grid_items_size: medium
 
 # Onglets qui regroupent les catégories par domaine. Chaque catégorie de
 # data.yml doit apparaître dans au moins un groupe pour rester visible en

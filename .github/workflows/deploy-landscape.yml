@@ -1,18 +1,23 @@
 name: Deploy ANS landscape
 
-# Triggered by "Build images" finishing (not directly by push): that workflow
-# builds ghcr.io/ansforge/ans-landscape from this repo's own source (crates/cli
-# + ui/webapp) on every push to main, with no path filter. Reacting to its
-# completion — instead of our own push/paths trigger — guarantees we always
-# deploy with the freshly-built custom image, whether the change was in
-# landscape/ content or in the landscape2 UI itself, and avoids a race where
-# we'd pull a stale image while the multi-minute Rust+wasm-pack+yarn build is
-# still running.
+# Builds its own landscape2 image from this repo's source (crates/cli +
+# ui/webapp) instead of depending on .github/workflows/build-images.yml or
+# pulling the upstream ghcr.io/cncf/landscape2 image. Both alternatives were
+# tried and rejected:
+#   - ghcr.io/cncf/landscape2 doesn't contain our ui/webapp customizations
+#     (e.g. the tool name + status color shown on grid tiles).
+#   - build-images.yml (and ci.yml) use `runs-on: labels: ubuntu-latest-8-cores`,
+#     a custom runner label with no runner actually available in this repo —
+#     every run against it sits queued forever or gets cancelled, so it can
+#     never produce a fresh image. Depending on it (via workflow_run) meant
+#     deploys silently stopped happening.
+# Building here on plain `ubuntu-latest` (proven to work — this workflow's
+# own past runs succeeded on it) is slower per run than an 8-core runner
+# would be, but it's the only path that's actually confirmed to execute.
 on:
-  workflow_run:
-    workflows: ["Build images"]
-    types: [completed]
-    branches: [main]
+  push:
+    branches:
+      - main
   workflow_dispatch: {}
 
 permissions:
@@ -25,25 +30,29 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  LANDSCAPE2_IMAGE: ghcr.io/ansforge/ans-landscape:latest
+  LANDSCAPE2_IMAGE: landscape2-local:latest
 
 jobs:
   build:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build landscape2 image from source
+        uses: docker/build-push-action@v6
         with:
-          # Pin to the exact commit "Build images" just built, not whatever
-          # main happens to be when this job starts (workflow_dispatch has no
-          # workflow_run event, so it falls back to the default checkout).
-          ref: ${{ github.event.workflow_run.head_sha || github.ref }}
+          context: .
+          file: crates/cli/Dockerfile
+          tags: ${{ env.LANDSCAPE2_IMAGE }}
+          load: true
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
-      - name: Pull landscape2 image
-        run: docker pull "$LANDSCAPE2_IMAGE"
-
-      # The landscape2 image runs as a non-root user by default. Running the
+      # The landscape2 image runs as a non-root user by default; running the
       # whole job inside it (via the job-level `container:` key) makes GitHub
       # Actions execute checkout/upload-pages-artifact as that non-root user
       # too, which fails with EACCES writing to the runner's _temp directory.

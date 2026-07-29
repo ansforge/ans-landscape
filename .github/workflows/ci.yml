@@ -35,6 +35,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
       - name: Install dependencies
         working-directory: ./ui/webapp
         run: yarn install --network-concurrency 1
@@ -56,6 +60,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
       - name: Install dependencies
         working-directory: ./ui/common
         run: yarn install --network-concurrency 1
@@ -74,6 +82,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
       - name: Install dependencies
         working-directory: ./ui/embed
         run: yarn install --network-concurrency 1
@@ -92,6 +104,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v5
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
       - name: Install dependencies
         working-directory: ./ui/embed-item
         run: yarn install --network-concurrency 1

@@ -36,11 +36,15 @@ jobs:
       # Actions execute checkout/upload-pages-artifact as that non-root user
       # too, which fails with EACCES writing to the runner's _temp directory.
       # Instead we stay on the normal runner and only use the image for the
-      # actual CLI invocations, matching our own uid/gid so output files are
-      # writable/readable without any ownership fixup.
+      # actual CLI invocations, run as root (--user root) so it can always
+      # write into the bind-mounted workspace regardless of its owning uid.
+      # GitHub-hosted runners don't use Docker userns-remap, so container
+      # root maps straight to host root here; output files keep the default
+      # world-readable permissions so the later upload step (non-root) can
+      # still read them.
       - name: Validate landscape data sources
         run: |
-          docker run --rm --user "$(id -u):$(id -g)" \
+          docker run --rm --user root \
             -v "${{ github.workspace }}:/workspace" -w /workspace \
             "$LANDSCAPE2_IMAGE" sh -c '
               landscape2 validate data --data-file landscape/data.yml &&
@@ -50,7 +54,7 @@ jobs:
 
       - name: Build landscape website
         run: |
-          docker run --rm --user "$(id -u):$(id -g)" \
+          docker run --rm --user root \
             -v "${{ github.workspace }}:/workspace" -w /workspace \
             "$LANDSCAPE2_IMAGE" landscape2 build \
               --data-file landscape/data.yml \

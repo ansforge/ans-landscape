@@ -40,8 +40,11 @@ header:
 #   links:
 #     homepage: "https://esante.gouv.fr"
 
-view_mode: grid
-grid_items_size: medium
+# "grid" (défaut du template) n'affiche que les logos, sans nom ni badge de
+# statut visibles (il faut survoler/cliquer une icône pour les voir). "card"
+# affiche nom, description et badge recommande/alternative/deprecie
+# directement sur chaque carte — c'est ce qu'on veut ici.
+view_mode: card
 
 # Onglets qui regroupent les catégories par domaine. Chaque catégorie de
 # data.yml doit apparaître dans au moins un groupe pour rester visible en

@@ -38,11 +38,6 @@ categories:
             logo: clickup.svg
             description: "Plateforme de gestion de tâches et de projets."
             project: alternative
-          - name: Trello
-            homepage_url: https://trello.com
-            logo: trello.svg
-            description: "Gestion de projet Kanban (tableaux, listes, cartes)."
-            project: alternative
 
       - name: Documentation & base de connaissances
         items:
@@ -74,11 +69,6 @@ categories:
             logo: favicon-esante-gouv-fr.png
             description: "Plateforme interne de l'agence (actualités, offres de service, pages thématiques), bâtie sur SharePoint via Powell Software."
             project: recommande
-          - name: Google Workspace (Docs/Drive)
-            homepage_url: https://workspace.google.com
-            logo: googledrive.svg
-            description: "Référentiels collaboratifs utilisés pour le référencement Ségur (documents, guides, listes officielles)."
-            project: alternative
 
       - name: Communication & messagerie
         items:
@@ -92,11 +82,6 @@ categories:
             logo: microsoftoutlook.svg
             description: "Messagerie et calendrier Microsoft 365."
             project: recommande
-          - name: Zoom
-            homepage_url: https://zoom.us
-            logo: zoom.svg
-            description: "Visioconférence, webinaires et partage d'écran."
-            project: alternative
 
       - name: Diagrammes & conception
         items:
@@ -148,11 +133,6 @@ categories:
             logo: visualstudiocode.svg
             description: "IDE principal multi-langages."
             project: recommande
-          - name: IntelliJ IDEA
-            homepage_url: https://www.jetbrains.com/idea/
-            logo: intellijidea.svg
-            description: "IDE Java/JVM."
-            project: alternative
 
       - name: Intégration & déploiement continu (CI/CD)
         items:
@@ -161,10 +141,10 @@ categories:
             logo: jenkins.svg
             description: "Automatisation CI/CD de la Forge."
             project: recommande
-          - name: GitLab CI/CD
-            homepage_url: https://docs.gitlab.com/ee/ci/
-            logo: gitlab.svg
-            description: "Pipelines intégrés GitLab."
+          - name: Github CI/CD
+            homepage_url: https://github.com/features/actions
+            logo: github.svg
+            description: "Pipelines intégrés GitHub."
             project: alternative
 
       - name: Gestion des artefacts & registres
@@ -179,11 +159,6 @@ categories:
             logo: harbor.svg
             description: "Registry d'images conteneurs."
             project: recommande
-          - name: JFrog Artifactory
-            homepage_url: https://jfrog.com/artifactory/
-            logo: jfrog.svg
-            description: "Solution DevOps d'hébergement et de distribution d'artefacts binaires."
-            project: deprecie
 
       - name: Qualité & sécurité du code
         items:
@@ -197,11 +172,6 @@ categories:
             logo: trivy.svg
             description: "Analyse des vulnérabilités."
             project: recommande
-          - name: Sonarqube
-            homepage_url: https://www.sonarsource.com/products/sonarqube/
-            logo: sonarqubeserver.svg
-            description: "Analyse qualité et sécurité du code, auto-hébergée."
-            project: alternative
           - name: OWASP Dependency Check
             homepage_url: https://owasp.org/www-project-dependency-check/
             logo: dependencycheck.svg
@@ -218,21 +188,11 @@ categories:
 
       - name: Modélisation & architecture d'entreprise
         items:
-          - name: Sparx Enterprise Architect
-            homepage_url: https://sparxsystems.com/products/ea/
-            logo: favicon-sparxsystems-com.png
-            description: "Modélisation et cartographie (UML, BPMN, ArchiMate)."
-            project: recommande
           - name: Mercator
             homepage_url: https://esante.gouv.fr
             logo: favicon-esante-gouv-fr.png
             description: "Cartographie du système d'information de l'agence."
             project: recommande
-          - name: Modelio
-            homepage_url: https://www.modelio.org
-            logo: placeholder.svg
-            description: "Modélisation UML, BPMN, SysML et ArchiMate."
-            project: alternative
 
   - name: DevOps & Infrastructure
     subcategories:
@@ -248,16 +208,6 @@ categories:
             logo: scaleway.svg
             description: "Cloud alternatif."
             project: alternative
-          - name: Microsoft Azure
-            homepage_url: https://azure.microsoft.com
-            logo: microsoftazure.svg
-            description: "Cloud public, plateforme applicative (Apps & Services)."
-            project: alternative
-          - name: Amazon Web Services
-            homepage_url: https://aws.amazon.com
-            logo: amazonwebservices.svg
-            description: "Cloud public."
-            project: deprecie
 
       - name: Conteneurs & orchestration
         items:
@@ -265,11 +215,6 @@ categories:
             homepage_url: https://kubernetes.io
             logo: kubernetes.svg
             description: "Orchestration de conteneurs."
-            project: recommande
-          - name: Harbor
-            homepage_url: https://goharbor.io
-            logo: harbor.svg
-            description: "Registry d'images."
             project: recommande
           - name: ArgoCD
             homepage_url: https://argo-cd.readthedocs.io
@@ -289,11 +234,6 @@ categories:
             logo: terraform.svg
             description: "Provisionnement d'infrastructure."
             project: recommande
-          - name: OpenTofu
-            homepage_url: https://opentofu.org
-            logo: opentofu.svg
-            description: "Alternative open source à Terraform."
-            project: alternative
           - name: Ansible
             homepage_url: https://www.ansible.com
             logo: ansible.svg
@@ -302,11 +242,6 @@ categories:
 
       - name: Automatisation & Low-code
         items:
-          - name: Rudder
-            homepage_url: https://www.rudder.io
-            logo: favicon-rudder-io.png
-            description: "Gestion de configuration et de conformité automatisée des systèmes."
-            project: recommande
           - name: N8N
             homepage_url: https://n8n.io
             logo: n8n.svg
@@ -353,11 +288,6 @@ categories:
             logo: prometheus.svg
             description: "Collecte des métriques."
             project: recommande
-          - name: Loki
-            homepage_url: https://grafana.com/oss/loki/
-            logo: favicon-grafana-com.png
-            description: "Centralisation des logs."
-            project: recommande
           - name: Zabbix
             homepage_url: https://www.zabbix.com
             logo: favicon-zabbix-com.png
@@ -369,63 +299,12 @@ categories:
             description: "Recherche et analyse de logs (utilisé notamment pour ProSantéConnect)."
             project: alternative
 
-      - name: Réseau & sécurité périmétrique
-        items:
-          - name: Fortinet Manager
-            homepage_url: https://www.fortinet.com
-            logo: fortinet.svg
-            description: "Gestion centralisée des équipements Fortinet (pare-feu, SD-WAN)."
-            project: recommande
-          - name: FortiClient VPN
-            homepage_url: https://www.fortinet.com
-            logo: fortinet.svg
-            description: "Client VPN sécurisé pour l'accès distant chiffré aux réseaux de l'ANS."
-            project: recommande
-          - name: Fortinet FortiAnalyzer
-            homepage_url: https://www.fortinet.com
-            logo: fortinet.svg
-            description: "Journalisation, analyse et reporting centralisés des équipements Fortinet."
-            project: recommande
-          - name: PulseSecure
-            homepage_url: https://www.ivanti.com/products/connect-secure-vpn
-            logo: favicon-ivanti-com.png
-            description: "VPN sécurisé pour l'accès distant aux ressources internes."
-            project: alternative
-          - name: mRemoteNG
-            homepage_url: https://mremoteng.org
-            logo: favicon-mremoteng-org.png
-            description: "Gestionnaire de connexions à distance multi-protocoles (RDP, VNC, SSH)."
-            project: alternative
-
-      - name: Annuaire & DNS
-        items:
-          - name: DNS AD
-            homepage_url: https://learn.microsoft.com/en-us/windows-server/networking/dns/dns-top
-            logo: favicon-learn-microsoft-com.png
-            description: "Registre de noms Active Directory."
-            project: recommande
-          - name: DNS GANDI
-            homepage_url: https://www.gandi.net
-            logo: gandi.svg
-            description: "Gestion des noms de domaine (DNS) chez l'hébergeur Gandi."
-            project: recommande
-          - name: AD Manager
-            homepage_url: https://www.manageengine.com/products/ad-manager/
-            logo: favicon-manageengine-com.png
-            description: "Administration et sécurisation des annuaires Active Directory."
-            project: alternative
-
       - name: Virtualisation & Cloud privé
         items:
           - name: VMware vSphere
             homepage_url: https://www.vmware.com/products/cloud-infrastructure/vsphere
             logo: vmware.svg
             description: "Plateforme de virtualisation d'infrastructure."
-            project: recommande
-          - name: VXRail
-            homepage_url: https://www.dell.com/en-us/shop/dell-vxrail
-            logo: dell.svg
-            description: "Infrastructure hyperconvergée (Dell EMC/VMware)."
             project: recommande
           - name: Proxmox
             homepage_url: https://www.proxmox.com
@@ -437,14 +316,6 @@ categories:
             logo: citrix.svg
             description: "Virtualisation, travail à distance et cloud computing."
             project: alternative
-
-      - name: Sauvegarde & protection des données
-        items:
-          - name: PowerProtect Data Manager
-            homepage_url: https://www.dell.com/en-us/dt/data-protection/powerprotect-data-manager.htm
-            logo: dell.svg
-            description: "Sauvegarde, restauration et conformité des données."
-            project: recommande
 
       - name: Gestion de parc & terminaux
         items:
@@ -459,55 +330,19 @@ categories:
             description: "Serveur d'impression centralisé."
             project: alternative
 
-      - name: Affichage dynamique
-        items:
-          - name: Xibo
-            homepage_url: https://xibosignage.com
-            logo: favicon-xibosignage-com.png
-            description: "Système open source d'affichage dynamique (digital signage)."
-            project: recommande
-
   - name: Intelligence Artificielle
     subcategories:
       - name: Assistants IA & copilotes
         items:
-          - name: Claude Code
-            homepage_url: https://www.anthropic.com/claude-code
-            logo: claudecode.svg
-            description: "Assistant IA pour le développement."
-            project: recommande
           - name: Microsoft 365 Copilot
             homepage_url: https://www.microsoft.com/microsoft-365/copilot
             logo: favicon-microsoft-com.png
             description: "Assistant IA Microsoft 365."
             project: recommande
-          - name: GitHub Copilot
-            homepage_url: https://github.com/features/copilot
-            logo: githubcopilot.svg
-            description: "Assistant de développement dans l'IDE."
-            project: recommande
-          - name: ChatGPT
-            homepage_url: https://openai.com/chatgpt
-            logo: openai.svg
-            description: "Assistant conversationnel."
-            project: alternative
-
-      - name: Modèles de langage (LLM)
-        items:
-          - name: Claude
-            homepage_url: https://www.anthropic.com
-            logo: anthropic.svg
-            description: "Modèles Anthropic."
-            project: recommande
-          - name: Mistral
-            homepage_url: https://mistral.ai
-            logo: mistralai.svg
-            description: "Modèles européens."
-            project: recommande
-          - name: GPT
-            homepage_url: https://openai.com
-            logo: openai.svg
-            description: "Modèles OpenAI."
+          - name: Claude Code
+            homepage_url: https://www.anthropic.com/claude-code
+            logo: claudecode.svg
+            description: "Assistant IA pour le développement."
             project: alternative
 
   - name: Données & Analytique
@@ -523,19 +358,6 @@ categories:
             homepage_url: https://www.mysql.com
             logo: mysql.svg
             description: "Base de données relationnelle."
-            project: alternative
-
-      - name: Intégration de données / ETL
-        items:
-          - name: Talend
-            homepage_url: https://www.talend.com
-            logo: talend.svg
-            description: "ETL et intégration de données."
-            project: recommande
-          - name: Airbyte
-            homepage_url: https://airbyte.com
-            logo: airbyte.svg
-            description: "Connecteurs et intégration open source."
             project: alternative
 
       - name: Reporting & Business Intelligence
@@ -580,11 +402,6 @@ categories:
             logo: postman.svg
             description: "Tests et documentation d'API (requêtes HTTP, automatisation de scénarios)."
             project: alternative
-          - name: ReadyAPI
-            homepage_url: https://smartbear.com/product/ready-api/overview/
-            logo: favicon-smartbear-com.png
-            description: "Tests automatisés pour API REST dans les environnements de validation des services numériques de santé."
-            project: alternative
 
       - name: Normes & interopérabilité
         items:
@@ -612,29 +429,6 @@ categories:
             homepage_url: https://www.microsoft.com/security/business/identity-access/microsoft-entra-id
             logo: favicon-microsoft-com.png
             description: "Gestion des identités et des accès basée sur le cloud (anciennement Azure AD)."
-            project: alternative
-
-      - name: Gestion des vulnérabilités
-        items:
-          - name: Trivy
-            homepage_url: https://trivy.dev
-            logo: trivy.svg
-            description: "Scan de vulnérabilités conteneurs et dépendances."
-            project: recommande
-          - name: Qualys
-            homepage_url: https://www.qualys.com
-            logo: qualys.svg
-            description: "Gestion de la surface d'exposition."
-            project: alternative
-          - name: Greenbone
-            homepage_url: https://www.greenbone.net
-            logo: placeholder.svg
-            description: "Gestion des vulnérabilités et scans de sécurité réseau, open source."
-            project: alternative
-          - name: OWASP Dependency Check
-            homepage_url: https://owasp.org/www-project-dependency-check/
-            logo: dependencycheck.svg
-            description: "Contrôle des dépendances."
             project: alternative
 
       - name: Conformité & protection des données (RGPD)
@@ -689,22 +483,9 @@ categories:
             description: "Pare-feu applicatif Web (WAF) basé sur NGINX."
             project: recommande
 
-      - name: CERT & gestion des incidents de sécurité
-        items:
-          - name: Artemis
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Plateforme de cybersurveillance du CERT Santé."
-            project: recommande
-          - name: Infra Incidents et Alertes CERT
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Outils et processus du CERT Santé pour détecter et traiter les incidents de sécurité."
-            project: recommande
-
   - name: Support & Exploitation (ITSM)
     subcategories:
-      - name: Ticketing / Helpdesk
+      - name: Ticketing / Helpdesk / CMDB
         items:
           - name: Jira Service Management
             homepage_url: https://www.atlassian.com/software/jira/service-management
@@ -717,47 +498,8 @@ categories:
             description: "Support et gestion de parc, open source."
             project: alternative
 
-      - name: Gestion des configurations (CMDB)
-        items:
-          - name: GLPI
-            homepage_url: https://glpi-project.org
-            logo: favicon-glpi-project-org.png
-            description: "CMDB et inventaire de parc, open source."
-            project: recommande
-
   - name: Ressources Humaines
     subcategories:
-      - name: Gestion des talents & recrutement
-        items:
-          - name: Foederis
-            homepage_url: https://www.foederis.com
-            logo: favicon-foederis-com.png
-            description: "Gestion des talents et entretiens RH, en mode SaaS."
-            project: recommande
-          - name: JobTeaser
-            homepage_url: https://www.jobteaser.com
-            logo: favicon-jobteaser-com.png
-            description: "Plateforme emploi/stages et marque employeur."
-            project: alternative
-          - name: Recruitee
-            homepage_url: https://recruitee.com
-            logo: favicon-recruitee-com.png
-            description: "Recrutement collaboratif (ATS), de la publication d'offres à l'onboarding."
-            project: alternative
-
-      - name: Administration RH & paie
-        items:
-          - name: MyPeopleDoc
-            homepage_url: https://www.mypeopledoc.com
-            logo: favicon-mypeopledoc-com.png
-            description: "Coffre-fort numérique RH (fiches de paie, contrats) et automatisation administrative."
-            project: recommande
-          - name: Cegid
-            homepage_url: https://www.cegid.com
-            logo: favicon-cegid-com.png
-            description: "Gestion des demandes de congés et de l'administration RH."
-            project: recommande
-
       - name: Engagement & sondages RH
         items:
           - name: Zest (ex Bloomind)
@@ -772,34 +514,6 @@ categories:
             homepage_url: https://www.deskbird.com
             logo: favicon-deskbird-com.png
             description: "Gestion du lieu de travail (flex office, réservation de postes)."
-            project: recommande
-
-  - name: Finance & Comptabilité
-    subcategories:
-      - name: Notes de frais & déplacements
-        items:
-          - name: Notilus
-            homepage_url: https://www.notilus.com
-            logo: favicon-notilus-com.png
-            description: "Gestion des notes de frais et déplacements, dématérialisée."
-            project: recommande
-          - name: Eksae
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Saisie et archivage des notes de frais."
-            project: alternative
-
-      - name: ERP & gestion comptable
-        items:
-          - name: Qualiac
-            homepage_url: https://www.qualiac.com
-            logo: placeholder.svg
-            description: "ERP de gestion comptable et financière (suivi budgétaire, engagements, dépenses)."
-            project: recommande
-          - name: Seldon/Winvest
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Gestion comptable du patrimoine (immobilisations), inventaire physique et reporting."
             project: recommande
 
   - name: Gestion documentaire & Signature électronique
@@ -829,14 +543,6 @@ categories:
             logo: favicon-xelians-fr.png
             description: "Archivage hybride (physique et numérique), traçabilité et valeur probante."
             project: alternative
-
-      - name: Gestion électronique de documents (GED)
-        items:
-          - name: GED Calypso
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Gestion électronique documentaire basée sur le standard Calypso."
-            project: recommande
 
   - name: Formation & e-learning
     subcategories:
@@ -887,16 +593,6 @@ categories:
             logo: canva.svg
             description: "Design graphique et création collaborative."
             project: recommande
-          - name: Adobe Creative Cloud
-            homepage_url: https://www.adobe.com/creativecloud.html
-            logo: adobecreativecloud.svg
-            description: "Suite créative Adobe (plus de 20 applications professionnelles)."
-            project: alternative
-          - name: PlayPlay
-            homepage_url: https://playplay.com
-            logo: favicon-playplay-com.png
-            description: "Création vidéo en ligne assistée par IA."
-            project: alternative
           - name: Kstudio
             homepage_url: https://esante.gouv.fr
             logo: favicon-esante-gouv-fr.png
@@ -918,11 +614,6 @@ categories:
             logo: limesurvey.svg
             description: "Création et gestion de sondages en ligne."
             project: recommande
-          - name: Eval&Go
-            homepage_url: https://www.evalandgo.com
-            logo: favicon-evalandgo-com.png
-            description: "Sondages, questionnaires et enquêtes en ligne, solution française."
-            project: alternative
 
       - name: Gestion d'événements
         items:
@@ -930,57 +621,6 @@ categories:
             homepage_url: https://esante.gouv.fr
             logo: favicon-esante-gouv-fr.png
             description: "Gestion des événements et inscriptions en ligne, plateforme SaaS française."
-            project: recommande
-
-  - name: Santé numérique — Applications internes ANS
-    subcategories:
-      - name: Identité numérique & e-CPS
-        items:
-          - name: SEC PSC
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Fournisseur d'identité numérique santé de Pro Santé Connect."
-            project: recommande
-          - name: EDIT
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Éditeur d'identités de test pour l'intégration avec Pro Santé Connect."
-            project: recommande
-          - name: DiagCPS
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Diagnostic en ligne de la lecture des cartes CPx (CPS, CPE)."
-            project: recommande
-          - name: EssaietaEcps
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Simulateur en ligne pour tester l'authentification e-CPS en bac à sable."
-            project: alternative
-
-      - name: Composants & habilitations PSC
-        items:
-          - name: PSC Tools
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Composants techniques liés à ProSantéConnect (extracteurs, connecteurs, portails d'administration)."
-            project: recommande
-          - name: API Credentials
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Gestion des identifiants d'API pour Pro Santé Connect."
-            project: recommande
-          - name: Gestion MIE (ex TMAJ)
-            homepage_url: https://esante.gouv.fr
-            logo: favicon-esante-gouv-fr.png
-            description: "Modernisation des composants et flux du Centre de Gestion (domaine Gestion MIE & habilitations, SI-CPS)."
-            project: recommande
-
-      - name: Aide à la décision clinique
-        items:
-          - name: Synapse Medecine
-            homepage_url: https://www.synapse-medicine.com
-            logo: favicon-synapse-medicine-com.png
-            description: "Aide au bon usage du médicament pour les professionnels et établissements de santé."
             project: recommande
 
   - name: Poste de travail & Bureautique

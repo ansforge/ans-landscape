@@ -1,0 +1,206 @@
+# Landscape des outils ANS
+#
+# Ce fichier décrit les catégories, sous-catégories et outils affichés dans le
+# landscape. Voir landscape/README.md pour le guide d'édition complet, et
+# https://github.com/cncf/landscape2/blob/main/docs/config/data.yml pour la
+# référence exhaustive du format.
+#
+# Chaque sous-catégorie ne doit pas dépasser 5 outils (1 à 5 choix max).
+# Chaque outil placé ici est un EXEMPLE À REMPLACER par un outil réel.
+
+categories:
+  - name: Gestion de projet & Collaboration
+    subcategories:
+      - name: Gestion de projet & tâches
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Documentation & base de connaissances
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Communication & messagerie
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Diagrammes & conception
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: Développement logiciel
+    subcategories:
+      - name: Gestion de code source & revue de code
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Environnements de développement (IDE)
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Intégration & déploiement continu (CI/CD)
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Gestion des paquets & artefacts
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Qualité & analyse de sécurité du code
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: DevOps & Infrastructure
+    subcategories:
+      - name: Hébergement & cloud
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Conteneurs & orchestration
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Infrastructure as Code
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Supervision & observabilité
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Gestion des logs
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: Intelligence Artificielle
+    subcategories:
+      - name: Assistants IA & copilotes
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Modèles de langage (LLM)
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Plateformes MLOps & data science
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: Données & Analytique
+    subcategories:
+      - name: Bases de données
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Intégration de données / ETL
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Reporting & Business Intelligence
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: Sécurité & Identité
+    subcategories:
+      - name: Gestion des identités & accès (IAM)
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Gestion des secrets
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Gestion des vulnérabilités
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+
+  - name: Support & Exploitation (ITSM)
+    subcategories:
+      - name: Ticketing / helpdesk
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande
+      - name: Gestion des configurations (CMDB)
+        items:
+          - name: "Exemple à remplacer"
+            homepage_url: https://exemple.fr
+            logo: placeholder.svg
+            description: "TODO : remplacer par un outil réel utilisé/recommandé par l'ANS."
+            project: recommande

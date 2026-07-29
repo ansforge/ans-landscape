@@ -1,0 +1,154 @@
+.btn {
+  background: transparent;
+  border: 0;
+  font-size: 1.45rem;
+}
+
+.btn:hover {
+  color: var(--color2);
+}
+
+.modalCloseBtn {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.modalBody {
+  padding: 0;
+}
+
+.title {
+  padding: 1.7rem;
+}
+
+.mainWrapper {
+  min-height: 1px;
+}
+
+.contentWrapper {
+  min-height: 100%;
+}
+
+.configWrapper {
+  background-color: var(--bs-gray-100);
+}
+
+.label {
+  font-size: 0.8rem;
+}
+
+.labelSelect {
+  font-size: 0.8rem;
+}
+
+.previewTitle {
+  padding: 0 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.select,
+.input {
+  box-shadow: 0 0 0 0.2rem var(--bs-gray-200);
+  margin: 0.5rem 0.2rem;
+  width: 250px;
+  max-width: calc(100% - 0.4rem);
+  font-size: 0.8rem;
+}
+
+.select:focus,
+.input:focus {
+  box-shadow: 0 0 0 0.2rem var(--bs-gray-200) !important;
+}
+
+.dropdownWrapper {
+  margin: 0.5rem 0.2rem;
+  width: 250px;
+  max-width: calc(100% - 0.4rem);
+}
+
+.dropdownButton {
+  background-color: #fff;
+  border: 0;
+  box-shadow: 0 0 0 0.2rem var(--bs-gray-200);
+  font-size: 0.8rem;
+  padding: 0.55rem 0.75rem;
+  color: var(--bs-gray-800);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 31px;
+}
+
+.dropdownButton:focus {
+  box-shadow: 0 0 0 0.2rem var(--bs-gray-200) !important;
+}
+
+.dropdownButtonLabel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.dropdownButtonIcon {
+  flex-shrink: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  color: var(--bs-gray-800);
+}
+
+.dropdownButtonDisabled,
+.dropdownButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  background-color: #f8f9fa;
+  color: var(--bs-gray-500);
+}
+
+.dropdownMenu {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 0;
+  box-shadow: 0 0 0 0.2rem var(--bs-gray-200) !important;
+  margin-top: 0.25rem;
+}
+
+.dropdownOption {
+  margin-bottom: 0.25rem;
+}
+
+.optionLabel {
+  font-size: 0.8rem;
+}
+
+.dropdownHint {
+  font-size: 0.7rem;
+  color: var(--bs-gray-600);
+}
+
+.inputColor,
+.inputColor:focus {
+  appearance: none;
+  outline: 1px solid rgb(222, 226, 230) !important;
+  border: 3px solid rgb(248, 249, 250) !important;
+  inline-size: 35px;
+  block-size: 20px;
+  border-radius: 0;
+}
+
+.inputColor::-moz-color-swatch,
+.inputColor::-webkit-color-swatch {
+  border-radius: 0;
+  border-style: none;
+}
+
+.codeWrapper {
+  background-color: var(--bs-gray-100);
+}
+
+.code {
+  height: 74px;
+  padding: 0.4rem 1rem !important;
+  font-size: 0.8rem;
+}

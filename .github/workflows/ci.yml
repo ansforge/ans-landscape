@@ -1,0 +1,103 @@
+name: CI
+
+on:
+  merge_group:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint-and-test-cli-tool:
+    runs-on:
+      labels: ubuntu-latest-8-cores
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@master
+        with:
+          toolchain: 1.96.1
+          components: clippy, rustfmt
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+      - name: Run clippy
+        run: cargo clippy --all-targets --all-features -- --deny warnings
+      - name: Run rustfmt
+        run: cargo fmt --all -- --check
+      - name: Run tests
+        run: cargo test
+
+  lint-and-test-webapp:
+    runs-on:
+      labels: ubuntu-latest-8-cores
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install dependencies
+        working-directory: ./ui/webapp
+        run: yarn install --network-concurrency 1
+      - name: Run prettier
+        working-directory: ./ui/webapp
+        run: yarn format:diff
+      - name: Run eslint
+        working-directory: ./ui/webapp
+        run: yarn lint
+      - name: Run tests
+        working-directory: ./ui/webapp
+        run: yarn test
+
+  lint-common:
+    runs-on:
+      labels: ubuntu-latest-8-cores
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install dependencies
+        working-directory: ./ui/common
+        run: yarn install --network-concurrency 1
+      - name: Run prettier
+        working-directory: ./ui/common
+        run: yarn format:diff
+      - name: Run eslint
+        working-directory: ./ui/common
+        run: yarn lint
+
+  lint-and-test-embed:
+    runs-on:
+      labels: ubuntu-latest-8-cores
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install dependencies
+        working-directory: ./ui/embed
+        run: yarn install --network-concurrency 1
+      - name: Run prettier
+        working-directory: ./ui/embed
+        run: yarn format:diff
+      - name: Run eslint
+        working-directory: ./ui/embed
+        run: yarn lint
+
+  lint-embed-item:
+    runs-on:
+      labels: ubuntu-latest-8-cores
+    env:
+      NODE_OPTIONS: --max_old_space_size=4096
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+      - name: Install dependencies
+        working-directory: ./ui/embed-item
+        run: yarn install --network-concurrency 1
+      - name: Run prettier
+        working-directory: ./ui/embed-item
+        run: yarn format:diff
+      - name: Run eslint
+        working-directory: ./ui/embed-item
+        run: yarn lint

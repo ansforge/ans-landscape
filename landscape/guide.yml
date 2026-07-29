@@ -1,0 +1,51 @@
+# Guide du landscape ANS
+#
+# Ce contenu alimente la page /guide du site généré. Il complète la grille
+# en expliquant, catégorie par catégorie, ce qu'elle couvre et comment
+# choisir entre les outils proposés.
+#
+# Référence : https://github.com/cncf/landscape2/blob/main/docs/config/guide.yml
+
+categories:
+  - category: "Gestion de projet & Collaboration"
+    content: |
+      Outils pour piloter des projets, partager de la documentation,
+      communiquer en équipe et concevoir des schémas. À utiliser dès qu'un
+      besoin de suivi de tâches, de base de connaissances ou d'échange
+      d'équipe se présente, avant d'improviser une solution ad hoc.
+
+  - category: "Développement logiciel"
+    content: |
+      Outils du cycle de développement : gestion de code source, IDE,
+      intégration/déploiement continu, gestion des paquets et analyse de
+      qualité/sécurité du code. Référez-vous à cette catégorie pour
+      standardiser la chaîne d'outils d'une équipe de développement.
+
+  - category: "DevOps & Infrastructure"
+    content: |
+      Outils d'hébergement, de conteneurisation, d'infrastructure as code,
+      de supervision et de gestion des logs. Utile pour toute équipe qui
+      déploie et exploite des services en production.
+
+  - category: "Intelligence Artificielle"
+    content: |
+      Assistants et copilotes IA, modèles de langage et plateformes MLOps /
+      data science. Cette catégorie évolue vite : vérifiez la date de mise à
+      jour des recommandations avant de vous engager sur un choix durable.
+
+  - category: "Données & Analytique"
+    content: |
+      Bases de données, outils d'intégration/ETL et de reporting/BI.
+      Point de départ pour tout projet nécessitant de stocker, transformer
+      ou restituer des données.
+
+  - category: "Sécurité & Identité"
+    content: |
+      Gestion des identités et des accès (IAM), des secrets et des
+      vulnérabilités. À consulter systématiquement dès qu'un projet manipule
+      des identifiants, des secrets ou expose un service.
+
+  - category: "Support & Exploitation (ITSM)"
+    content: |
+      Outils de ticketing/helpdesk et de gestion des configurations (CMDB)
+      pour le support aux utilisateurs et le suivi du parc applicatif.

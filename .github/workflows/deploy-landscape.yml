@@ -1,0 +1,59 @@
+name: Deploy ANS landscape
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "landscape/**"
+      - ".github/workflows/deploy-landscape.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/cncf/landscape2:latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Validate landscape data sources
+        run: |
+          landscape2 validate data --data-file landscape/data.yml
+          landscape2 validate settings --settings-file landscape/settings.yml
+          landscape2 validate guide --guide-file landscape/guide.yml
+
+      - name: Build landscape website
+        run: |
+          landscape2 build \
+            --data-file landscape/data.yml \
+            --settings-file landscape/settings.yml \
+            --guide-file landscape/guide.yml \
+            --logos-path landscape/logos \
+            --output-dir landscape/build
+
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: landscape/build
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

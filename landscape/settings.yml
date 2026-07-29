@@ -1,0 +1,75 @@
+# Réglages du landscape ANS
+#
+# Référence exhaustive : https://github.com/cncf/landscape2/blob/main/docs/config/settings.yml
+
+foundation: "Agence du Numérique en Santé"
+
+# Hébergé via GitHub Pages sur le dépôt ansforge/ans-landscape, en tant que
+# "project site" (donc servi depuis un sous-chemin, pas la racine du domaine).
+# TODO : si un domaine personnalisé est configuré (CNAME) pointant à la racine,
+# remplacer url par ce domaine et supprimer base_path.
+url: https://ansforge.github.io/ans-landscape
+base_path: /ans-landscape
+
+description: >-
+  Panorama des outils utilisés et recommandés à l'ANS, par domaine :
+  gestion de projet, développement, DevOps, IA, données, sécurité...
+
+# Palette neutre de démarrage — à remplacer par les couleurs de la charte
+# graphique ANS (7 couleurs rgba requises par le format).
+colors:
+  color1: "rgba(0, 91, 150, 1)"
+  color2: "rgba(0, 150, 136, 1)"
+  color3: "rgba(96, 149, 214, 1)"
+  color4: "rgba(0, 42, 81, 0.7)"
+  color5: "rgba(0, 91, 150, 0.7)"
+  color6: "rgba(0, 42, 81, 0.7)"
+  color7: "rgba(180, 219, 255, 1)"
+
+# TODO : une fois le logo ANS disponible (SVG), décommenter et pointer vers
+# son URL ou son chemin local pour l'afficher dans l'en-tête et le pied de
+# page du site.
+# header:
+#   logo: "https://exemple.fr/logo-ans.svg"
+#   links:
+#     homepage: "https://esante.gouv.fr"
+#
+# footer:
+#   logo: "https://exemple.fr/logo-ans.svg"
+#   links:
+#     homepage: "https://esante.gouv.fr"
+
+view_mode: grid
+grid_items_size: medium
+
+# Onglets qui regroupent les catégories par domaine. Chaque catégorie de
+# data.yml doit apparaître dans au moins un groupe pour rester visible en
+# mode grille — c'est le cas ici (7 catégories couvertes par les 5 groupes).
+groups:
+  - name: Tous les outils
+    categories:
+      - Gestion de projet & Collaboration
+      - Développement logiciel
+      - DevOps & Infrastructure
+      - Intelligence Artificielle
+      - Données & Analytique
+      - Sécurité & Identité
+      - Support & Exploitation (ITSM)
+
+  - name: Développement & DevOps
+    categories:
+      - Développement logiciel
+      - DevOps & Infrastructure
+
+  - name: Intelligence Artificielle
+    categories:
+      - Intelligence Artificielle
+
+  - name: Collaboration & Gestion de projet
+    categories:
+      - Gestion de projet & Collaboration
+
+  - name: Sécurité & Données
+    categories:
+      - Sécurité & Identité
+      - Données & Analytique

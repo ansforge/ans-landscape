@@ -1,0 +1,8 @@
+.modal {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1050;
+}
+
+.closeWrapper {
+  right: 1rem;
+}

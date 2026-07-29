@@ -18,29 +18,46 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+env:
+  LANDSCAPE2_IMAGE: ghcr.io/cncf/landscape2:latest
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/cncf/landscape2:latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
+      - name: Pull landscape2 image
+        run: docker pull "$LANDSCAPE2_IMAGE"
+
+      # The landscape2 image runs as a non-root user by default. Running the
+      # whole job inside it (via the job-level `container:` key) makes GitHub
+      # Actions execute checkout/upload-pages-artifact as that non-root user
+      # too, which fails with EACCES writing to the runner's _temp directory.
+      # Instead we stay on the normal runner and only use the image for the
+      # actual CLI invocations, matching our own uid/gid so output files are
+      # writable/readable without any ownership fixup.
       - name: Validate landscape data sources
         run: |
-          landscape2 validate data --data-file landscape/data.yml
-          landscape2 validate settings --settings-file landscape/settings.yml
-          landscape2 validate guide --guide-file landscape/guide.yml
+          docker run --rm --user "$(id -u):$(id -g)" \
+            -v "${{ github.workspace }}:/workspace" -w /workspace \
+            "$LANDSCAPE2_IMAGE" sh -c '
+              landscape2 validate data --data-file landscape/data.yml &&
+              landscape2 validate settings --settings-file landscape/settings.yml &&
+              landscape2 validate guide --guide-file landscape/guide.yml
+            '
 
       - name: Build landscape website
         run: |
-          landscape2 build \
-            --data-file landscape/data.yml \
-            --settings-file landscape/settings.yml \
-            --guide-file landscape/guide.yml \
-            --logos-path landscape/logos \
-            --output-dir landscape/build
+          docker run --rm --user "$(id -u):$(id -g)" \
+            -v "${{ github.workspace }}:/workspace" -w /workspace \
+            "$LANDSCAPE2_IMAGE" landscape2 build \
+              --data-file landscape/data.yml \
+              --settings-file landscape/settings.yml \
+              --guide-file landscape/guide.yml \
+              --logos-path landscape/logos \
+              --output-dir landscape/build
 
       - name: Upload pages artifact
         uses: actions/upload-pages-artifact@v3

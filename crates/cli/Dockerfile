@@ -1,5 +1,5 @@
 # Build CLI tool
-FROM rust:1.96.1-alpine3.24 as builder
+FROM rust:1.97.1-alpine3.24 as builder
 RUN apk --no-cache add musl-dev perl make libconfig-dev openssl-dev yarn wasm-pack binaryen
 WORKDIR /landscape2
 COPY crates crates
